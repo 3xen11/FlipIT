@@ -22,7 +22,7 @@ const Navigation = () => {
   }, []);
 
   return (
-    <div className={`bg-white ${isSticky ? 'sticky top-0' : ''}`}>
+    <div className={`bg-white z-50 ${isSticky ? 'sticky top-0' : ''}`}>
       <div className="flex justify-between items-center max-w-7xl h-16 mx-auto px-5">
         <p className="font-bold text-2xl text-slate-700 cursor-pointer">
           FISZK<span className="text-teal-500">IT</span>{' '}

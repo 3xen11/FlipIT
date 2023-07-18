@@ -1,11 +1,28 @@
-import blob from '../../src/img/blob-haikei.png';
+import React, { useState } from 'react';
 
-const Flashcard = () => {
+const Card = ({ text, description }) => {
+  const [flipped, setFlipped] = useState(false);
+
+  const handleCardFlip = () => {
+    setFlipped(!flipped);
+  };
+
   return (
-    <div className="rounded-2xl flex items-center">
-      <img src={blob} alt="iks" className="w-full h-full" />
-      <p className="text-white text-center">łebleblebleble</p>
+    <div
+      className={` card ${flipped ? 'flipped ' : ''}`}
+      onMouseEnter={handleCardFlip}
+      onMouseLeave={handleCardFlip}
+    >
+      <div className="card-inner w-full h-full transition-transform duration-500">
+        <div className=" card-front absolute h-full w-full flex items-center justify-center text-center  rounded-xl shadow-lg flashcardBack text-white font-bold tracking-wide">
+          <p className="drop-shadow-lg">{text}</p>
+        </div>
+        <div className="card-back text-white absolute h-full w-full flex items-center justify-center rounded-xl shadow-lg -rotate-180 bg-[#042824]">
+          <p>{description}</p>
+        </div>
+      </div>
     </div>
   );
 };
-export default Flashcard;
+
+export default Card;
