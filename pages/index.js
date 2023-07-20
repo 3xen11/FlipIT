@@ -4,6 +4,7 @@ import WhyFlashcards from '@/layout/WhyFlashcards';
 import HowItWorks from '@/layout/HowItWorks';
 import Categories from '@/layout/Categories';
 import Pricing from '@/layout/Pricing';
+import Contact from '@/layout/Contact';
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <HowItWorks />
       <Categories />
       <Pricing />
+      <Contact />
     </>
   );
 };
