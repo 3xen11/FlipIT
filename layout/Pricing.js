@@ -11,12 +11,24 @@ const Pricing = () => {
           <div className="py-2 px-8 h-3/5 flex flex-col items-center">
             <div className="h-4/5 w-full">
               <ul className="mt-3 text-sm">
-                <li className="py-0.5">lorem ipsum</li>
-                <li className="py-0.5">lorem ipsum</li>
-                <li className="py-0.5">lorem ipsum</li>
-                <li className="py-0.5">lorem ipsum</li>
-                <li className="py-0.5">lorem ipsum</li>
-                <li className="py-0.5">lorem ipsum</li>
+                <li className="py-0.5 border-b-2  border-teal-200">
+                  lorem ipsum
+                </li>
+                <li className="py-0.5 border-b-2  border-teal-200">
+                  lorem ipsum
+                </li>
+                <li className="py-0.5 border-b-2  border-teal-200">
+                  lorem ipsum
+                </li>
+                <li className="py-0.5 border-b-2  border-teal-200">
+                  lorem ipsum
+                </li>
+                <li className="py-0.5 border-b-2  border-teal-200">
+                  lorem ipsum
+                </li>
+                <li className="py-0.5 border-b-2  border-teal-200">
+                  lorem ipsum
+                </li>
               </ul>
             </div>
             <button className="bg-teal-400 text-sm py-2 px-4 hover:text-teal-400 hover:bg-white active:scale-95 transition-all text-white">
@@ -32,12 +44,24 @@ const Pricing = () => {
           <div className="py-2 px-8 h-3/5 flex flex-col items-center">
             <div className="h-4/5 w-full">
               <ul className="mt-3">
-                <li className="py-0.5">lorem ipsum</li>
-                <li className="py-0.5">lorem ipsum</li>
-                <li className="py-0.5">lorem ipsum</li>
-                <li className="py-0.5">lorem ipsum</li>
-                <li className="py-0.5">lorem ipsum</li>
-                <li className="py-0.5">lorem ipsum</li>
+                <li className="py-0.5 border-b-2  border-teal-600">
+                  lorem ipsum
+                </li>
+                <li className="py-0.5 border-b-2  border-teal-600">
+                  lorem ipsum
+                </li>
+                <li className="py-0.5 border-b-2  border-teal-600">
+                  lorem ipsum
+                </li>
+                <li className="py-0.5 border-b-2  border-teal-600">
+                  lorem ipsum
+                </li>
+                <li className="py-0.5 border-b-2  border-teal-600">
+                  lorem ipsum
+                </li>
+                <li className="py-0.5 border-b-2  border-teal-600">
+                  lorem ipsum
+                </li>
               </ul>
             </div>
             <button className="bg-teal-800 text-lg py-2 px-4 hover:text-teal-800 hover:bg-white active:scale-95 transition-all">
@@ -53,22 +77,22 @@ const Pricing = () => {
           <div className="py-2 px-8 h-3/5 flex flex-col items-center">
             <div className="h-4/5 w-full">
               <ul className="mt-3 text-sm">
-                <li className="py-0.5 border-b-2  border-teal-300 ">
+                <li className="py-0.5 border-b-2  border-teal-200 ">
                   lorem ipsum
                 </li>
-                <li className="py-0.5 border-b-2  border-teal-300 ">
+                <li className="py-0.5 border-b-2  border-teal-200 ">
                   lorem ipsum
                 </li>
-                <li className="py-0.5 border-b-2  border-teal-300 ">
+                <li className="py-0.5 border-b-2  border-teal-200 ">
                   lorem ipsum
                 </li>
-                <li className="py-0.5 border-b-2  border-teal-300 ">
+                <li className="py-0.5 border-b-2  border-teal-200 ">
                   lorem ipsum
                 </li>
-                <li className="py-0.5 border-b-2  border-teal-300 ">
+                <li className="py-0.5 border-b-2  border-teal-200 ">
                   lorem ipsum
                 </li>
-                <li className="py-0.5 border-b-2  border-teal-300 ">
+                <li className="py-0.5 border-b-2  border-teal-200 ">
                   lorem ipsum
                 </li>
               </ul>
