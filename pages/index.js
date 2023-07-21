@@ -1,5 +1,5 @@
 import Header from '@/layout/Header';
-import Navigation from '../layout/Navigation';
+import Navigation from '@/layout/Navigation';
 import WhyFlashcards from '@/layout/WhyFlashcards';
 import HowItWorks from '@/layout/HowItWorks';
 import Categories from '@/layout/Categories';
