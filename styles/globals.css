@@ -83,3 +83,12 @@
 .card-back {
   transform: rotateY(-180deg);
 }
+
+.contact-bg {
+  background-color: rgba(17, 94, 89, 1);
+  background-image: linear-gradient(
+    120deg,
+    rgba(17, 94, 89, 1) 0%,
+    rgba(4, 47, 46, 1) 100%
+  );
+}
