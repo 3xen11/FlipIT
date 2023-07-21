@@ -31,7 +31,7 @@ const Contact = () => {
                 <option value="#">lorem ipsum</option>
                 <option value="#">lorem ipsum</option>
               </select>
-              <button className="mt-14 tracking-wider text-white mx-auto bg-teal-500 py-2 w-full font-bold">
+              <button className="mt-14 tracking-wider text-white mx-auto bg-teal-500 py-2 w-full hover:text-teal-500 hover:bg-white active:scale-95 transition-all">
                 Wyślij
               </button>
             </div>
