@@ -5,6 +5,7 @@ import HowItWorks from '@/layout/HowItWorks';
 import Categories from '@/layout/Categories';
 import Pricing from '@/layout/Pricing';
 import Contact from '@/layout/Contact';
+import Footer from '@/layout/Footer';
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <Categories />
       <Pricing />
       <Contact />
+      <Footer />
     </>
   );
 };
