@@ -3,7 +3,7 @@ import { nanoid } from 'nanoid';
 export default [
   {
     id: nanoid(),
-    title: 'Prostota',
+    title: 'Łatwa obsługa',
     description:
       'Obsługa aplikacji jest dziecinnie prosta, wystarczy wybrać kategorię i zacząć naukę',
   },

@@ -35,19 +35,19 @@ export default [
     id: nanoid(),
     technology: 'GIT',
     img: '/svg/git.svg',
-    available: true,
+    available: false,
   },
   {
     id: nanoid(),
     technology: 'Angular',
     img: '/svg/angular.svg',
-    available: true,
+    available: false,
   },
   {
     id: nanoid(),
     technology: 'HTML',
     img: '/svg/html.svg',
-    available: true,
+    available: false,
   },
   {
     id: nanoid(),
@@ -59,13 +59,13 @@ export default [
     id: nanoid(),
     technology: 'CSS',
     img: '/svg/css.svg',
-    available: true,
+    available: false,
   },
   {
     id: nanoid(),
     technology: 'Tailwind',
     img: '/svg/tailwind.svg',
-    available: true,
+    available: false,
   },
   {
     id: nanoid(),
@@ -101,7 +101,7 @@ export default [
   //   id: nanoid(),
   //   technology: 'MySQL',
   //   img: reactIcon,
-  //   available: true,
+  //   available: false,
   // },
   // {
   //   id: nanoid(),
