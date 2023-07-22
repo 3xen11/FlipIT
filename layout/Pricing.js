@@ -5,9 +5,9 @@ const Pricing = () => {
   return (
     <section className="max-w-screen pt-20 bg-white pb-20">
       <SectionHeading heading={'Nie czekaj, zacznij naukę już teraz!'} />
-      <div className="max-w-7xl mx-auto p-5 grid grid-cols-12 gap-4  justify-around items-end">
+      <div className="max-w-7xl mx-auto p-5 flex justify-around items-end">
         {/* 1 - NAJTAŃSZA OPCJA - START */}
-        <div className="h-[450px] col-span-3 p-4  flex flex-col items-center relative bg-[url('/svg/pricingCardBackgroundLight.svg')] bg-cover bg-opacity-90 text-white hover:scale-105 transition-all shadow-lg">
+        <div className="h-[440px] w-80  p-4  flex flex-col items-center relative bg-[url('/svg/pricingCardBackgroundLight.svg')] bg-cover bg-opacity-90 text-white hover:scale-105 transition-all shadow-lg">
           <div className="bg-teal-800 h-14 flex justify-center px-8 items-center top-8 -left-8 absolute font-bold ">
             <p className="tracking-widest">BASIC</p>
           </div>
@@ -30,7 +30,7 @@ const Pricing = () => {
         {/* 1 - NAJTAŃSZA OPCJA - KONIEC */}
 
         {/* 2 - NAJDROŻSZA OPCJA - START */}
-        <div className=" bg-[url('/svg/pricingCardBackgroundDark.svg')] bg-cover h-[450px] col-span-4 col-start-5 p-4  flex flex-col items-center relative bg-opacity-90 text-white hover:scale-105 transition-all shadow-lg">
+        <div className="w-96 bg-[url('/svg/pricingCardBackgroundDark.svg')] bg-cover h-[450px]  p-4  flex flex-col items-center relative bg-opacity-90 text-white hover:scale-105 transition-all shadow-lg">
           <div className="bg-teal-500 h-14 flex justify-center px-8 items-center top-8 -left-8 absolute font-bold ">
             <p className="tracking-widest">PREMIUM</p>
           </div>
@@ -59,7 +59,7 @@ const Pricing = () => {
         {/* 2 - NAJDROŻSZA OPCJA - KONIEC */}
 
         {/* 3 - ŚREDNIA OPCJA - START */}
-        <div className="h-[450px] col-span-3 col-start-10 p-4  flex flex-col items-center relative bg-[url('/svg/pricingCardBackgroundLight.svg')] bg-cover bg-opacity-90 text-white hover:scale-105 transition-all shadow-lg">
+        <div className="h-[440px] w-80  p-4  flex flex-col items-center relative bg-[url('/svg/pricingCardBackgroundLight.svg')] bg-cover bg-opacity-90 text-white hover:scale-105 transition-all shadow-lg">
           <div className="bg-teal-800 h-14 flex justify-center px-8 items-center top-8 -left-8 absolute font-bold ">
             <p className="tracking-widest">STANDARD</p>
           </div>

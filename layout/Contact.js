@@ -11,13 +11,13 @@ const Contact = () => {
         headingAccent={'NAPISZ'}
         sign={' do nas!'}
       />
-      <div className="max-w-7xl mx-auto h-96  p-5 mb-10 contact-bg flex">
-        <div className="w-2/5 relative">
+      <div className="max-w-7xl mx-auto justify-center items-center   p-5 mb-10 contact-bg flex flex-col lg:flex-row">
+        <div className="w-3/5 md:w-2/5  relative">
           <ContactIcon className="w-full h-full" />
         </div>
-        <div className="w-3/5 ">
-          <form className="flex w-full h-full items-center">
-            <div className="w-2/5 h-64 flex flex-col px-2">
+        <div className="w-full lg:w-3/5 ">
+          <form className="flex w-full flex-col md:flex-row h-full items-center">
+            <div className="w-full sm:w-3/5 md:w-2/5 h-64 flex  flex-col px-2">
               <label className="text-white " htmlFor="email">
                 E-mail
               </label>
@@ -35,7 +35,7 @@ const Contact = () => {
                 Wyślij
               </button>
             </div>
-            <div className="w-3/5 h-64  flex flex-col px-2">
+            <div className="w-full sm:w-3/5  h-64  flex flex-col px-2">
               <label className="text-white " htmlFor="message">
                 Wiadomość
               </label>

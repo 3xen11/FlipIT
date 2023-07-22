@@ -29,7 +29,7 @@ const Navigation = () => {
         </p>
         <ul className="flex gap-8 text-3xl font-bold text-slate-700">
           <li className="cursor-pointer text-lg transition-all hover:text-teal-500 hover:scale-105 active:scale-100">
-            Sklep
+            Kup teraz
           </li>
           <li className="cursor-pointer transition-all hover:text-teal-500 hover:scale-105 active:scale-100">
             <AiOutlineShoppingCart />

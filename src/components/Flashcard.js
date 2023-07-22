@@ -14,7 +14,7 @@ const Card = ({ id, title, description }) => {
       onMouseEnter={handleCardFlip}
       onMouseLeave={handleCardFlip}
     >
-      <div className="card-inner w-full h-full transition-transform duration-500">
+      <div className="card-inner w-full h-96  transition-transform duration-500">
         <div className=" card-front absolute h-full w-full flex items-center justify-center text-center  rounded-xl shadow-lg bg-[url('/svg/pricingCardBackgroundDark.svg')] bg-cover text-white font-bold tracking-wide">
           <p className="drop-shadow-lg">{title}</p>
         </div>

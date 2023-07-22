@@ -13,7 +13,7 @@ const Categories = () => {
       <SectionHeading
         headingAccent={'Regularnie aktualizowana baza pytań i kategorii!'}
       />
-      <div className="max-w-7xl mx-auto p-5 grid grid-cols-12 gap-4 text-center">
+      <div className="max-w-7xl flex flex-wrap justify-center gap-4 mx-auto p-5 ">
         {Technologies.map((tech) => {
           const { id, technology, img, available } = tech;
 
@@ -25,7 +25,7 @@ const Categories = () => {
               height={60}
               alt={technology}
               title={`${technology}${!available ? ' - wkrótce' : ''}`}
-              className={`hover:scale-105 transition-all p-4 h-full w-full cursor-pointer object-contain  border-2 shadow-lg
+              className={`hover:scale-105 transition-transform p-4 h-24 w-24 cursor-pointer object-contain  border-2 shadow-lg
                   ${!available ? 'grayscale bg-gray-300' : 'bg-white'}
                 `}
             />

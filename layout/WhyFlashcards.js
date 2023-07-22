@@ -10,7 +10,7 @@ const WhyFlashcards = () => {
         headingAccent={'IT'}
         sign={'?'}
       />
-      <div className="max-w-7xl mx-auto h-96  grid grid-cols-4 gap-8 p-5 mb-10">
+      <div className="max-w-7xl mx-automin-h-96  grid  sm:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto p-5 mb-10">
         {WhyFlashCardsData.map((cardData) => {
           const { id } = cardData;
           return <Flashcard key={id} {...cardData} />;
