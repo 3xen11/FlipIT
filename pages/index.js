@@ -6,10 +6,15 @@ import Categories from '@/layout/Categories';
 import Pricing from '@/layout/Pricing';
 import Contact from '@/layout/Contact';
 import Footer from '@/layout/Footer';
+import Modal from '@/src/components/Modal';
+import CategoryModal from '@/src/components/CategoryModal';
 
 const Home = () => {
   return (
     <>
+      <Modal>
+        <CategoryModal />
+      </Modal>
       <Navigation />
       <Header />
       <WhyFlashcards />
