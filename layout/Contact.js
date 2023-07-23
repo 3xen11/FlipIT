@@ -11,17 +11,22 @@ const Contact = () => {
         headingAccent={'NAPISZ'}
         sign={' do nas!'}
       />
-      <div className="max-w-7xl mx-auto justify-center items-center   p-5 mb-10 contact-bg flex flex-col lg:flex-row">
-        <div className="w-3/5 md:w-2/5  relative">
-          <ContactIcon className="w-full h-full" />
+      <div className="max-w-7xl sm:w-4/5 mx-auto justify-center items-center p-5 mb-10 contact-bg flex flex-col lg:flex-row">
+        <div className="w-full md:w-2/5  hidden lg:block">
+          <ContactIcon className="w-3/5 mx-auto h-full" />
         </div>
-        <div className="w-full lg:w-3/5 ">
+        <div className="w-full">
           <form className="flex w-full flex-col md:flex-row h-full items-center">
-            <div className="w-full sm:w-3/5 md:w-2/5 h-64 flex  flex-col px-2">
-              <label className="text-white " htmlFor="email">
+            <div className="w-full md:w-2/5 min-h-64 flex flex-col px-2 order-2">
+              <label className="text-white mt-8 md:mt-0" htmlFor="email">
                 E-mail
               </label>
-              <input className="p-2 w-full py-2" type="text" id="name" />
+              <input
+                className="p-2 w-full py-2"
+                type="text"
+                id="name"
+                placeholder="Podaj swój email"
+              />
               <label className="text-white mt-8" htmlFor="topic">
                 Temat
               </label>
@@ -35,7 +40,7 @@ const Contact = () => {
                 Wyślij
               </button>
             </div>
-            <div className="w-full sm:w-3/5  h-64  flex flex-col px-2">
+            <div className="w-full md:w-3/5 h-64 flex flex-col px-2 order-1">
               <label className="text-white " htmlFor="message">
                 Wiadomość
               </label>
@@ -43,7 +48,8 @@ const Contact = () => {
                 className="p-2 resize-none grow w-full"
                 name="message"
                 id="message"
-              ></textarea>
+                placeholder="Wpisz treść wiadomości"
+              />
             </div>
           </form>
         </div>
