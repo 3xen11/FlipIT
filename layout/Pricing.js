@@ -83,7 +83,7 @@ const Pricing = () => {
         </div>
         {/* 1 - NAJTAŃSZA OPCJA - KONIEC */}
       </div>
-      <p className="max-w-7xl mx-auto mt-20 text-center px-20 lg:px-12 xl:px-0">
+      <p className="max-w-7xl mx-auto mt-20 text-center px-12 xl:px-0">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia aliquam
         assumenda dicta ipsa rem ut iure! Sint nulla, iusto necessitatibus error
         odit architecto maxime suscipit perspiciatis eaque, est voluptate.
