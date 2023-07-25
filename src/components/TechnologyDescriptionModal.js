@@ -1,9 +1,7 @@
-import Modal from './Modal';
-
-const CategoryModal = () => {
+const TechnologyDescriptionModal = () => {
   return (
     <div className=" w-full h-full flex flex-col justify-around">
-      <h4 className="p-4 text-5xl">JavaScript</h4>
+      <h4 className="p-4 text-5xl font-bold">JavaScript</h4>
       <p className="p-4 ">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia
         repudiandae odio ut. Corporis adipisci hic magnam provident iusto,
@@ -24,4 +22,4 @@ const CategoryModal = () => {
     </div>
   );
 };
-export default CategoryModal;
+export default TechnologyDescriptionModal;

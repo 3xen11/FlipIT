@@ -7,14 +7,16 @@ import Pricing from '@/layout/Pricing';
 import Contact from '@/layout/Contact';
 import Footer from '@/layout/Footer';
 import Modal from '@/src/components/Modal';
-import CategoryModal from '@/src/components/CategoryModal';
+import TechnologyDescriptionModal from '@/src/components/TechnologyDescriptionModal';
+import AvailableTechnologiesModal from '@/src/components/AvailableTechnologiesModal';
 
 const Home = () => {
   return (
     <>
-      <Modal>
-        <CategoryModal />
-      </Modal>
+      {/* <Modal> */}
+      {/* <TechnologyDescriptionModal /> */}
+      {/* <AvailableTechnologiesModal /> */}
+      {/* </Modal> */}
       <Navigation />
       <Header />
       <WhyFlashcards />
