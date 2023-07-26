@@ -25,6 +25,7 @@ const Shopping = () => {
         <ShoppingCardNormal
           key={ShoppingCardData[1].id}
           {...ShoppingCardData[1]}
+          openAvailableTechnologiesModal={openAvailableTechnologiesModal}
         />
         <ShoppingCardPremium
           key={ShoppingCardData[2].id}
@@ -34,6 +35,7 @@ const Shopping = () => {
         <ShoppingCardNormal
           key={ShoppingCardData[0].id}
           {...ShoppingCardData[0]}
+          openAvailableTechnologiesModal={openAvailableTechnologiesModal}
         />
       </div>
       <p className="max-w-7xl mx-auto mt-20 text-center px-12 xl:px-0">

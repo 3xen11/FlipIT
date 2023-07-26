@@ -1,6 +1,11 @@
 import { BsPlusCircle } from 'react-icons/bs';
 
-const ShoppingCard = ({ id, shoppingPackage, content }) => {
+const ShoppingCard = ({
+  id,
+  shoppingPackage,
+  content,
+  openAvailableTechnologiesModal,
+}) => {
   return (
     <div
       key={id}
@@ -10,10 +15,16 @@ const ShoppingCard = ({ id, shoppingPackage, content }) => {
         <p className="tracking-widest uppercase">{shoppingPackage}</p>
       </div>
       <div className="flex  w-full mt-24 justify-around ">
-        <div className="h-16 w-16 active:scale-95 transition-all cursor-pointer flex items-center justify-center bg-teal-700">
+        <div
+          className="h-16 w-16 active:scale-95 transition-all cursor-pointer flex items-center justify-center bg-teal-700"
+          onClick={() => openAvailableTechnologiesModal()}
+        >
           <BsPlusCircle className="h-8 w-8  " />
         </div>
-        <div className="h-16 w-16 active:scale-95 transition-all cursor-pointer flex items-center justify-center bg-teal-700">
+        <div
+          className="h-16 w-16 active:scale-95 transition-all cursor-pointer flex items-center justify-center bg-teal-700"
+          onClick={() => openAvailableTechnologiesModal()}
+        >
           <BsPlusCircle className="h-8 w-8  " />
         </div>
       </div>
