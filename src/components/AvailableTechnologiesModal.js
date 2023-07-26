@@ -1,4 +1,4 @@
-import Technologies from '../../data/CategoriesData';
+import Technologies from '../../data/CategoriesDescriptionData';
 import Image from 'next/image';
 
 const AvailableTechnologiesModal = () => {
@@ -21,7 +21,7 @@ const AvailableTechnologiesModal = () => {
                 height={60}
                 alt={technology}
                 title={`${technology}${!available ? ' - wkrótce' : ''}`}
-                className={` hover:scale-90 active:scale-100 transition-transform p-4 h-24 w-24 cursor-pointer object-contain   shadow-lg
+                className={` hover:scale-90 active:scale-100 transition-transform p-4 h-24 w-24 cursor-pointer object-contain shadow-lg
                   ${!available ? 'grayscale bg-gray-300' : 'bg-white'}
                 `}
               />

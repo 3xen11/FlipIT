@@ -2,8 +2,22 @@ import SectionHeading from '@/src/components/SectionHeading';
 import ShoppingCardNormal from '@/src/components/ShoppingCardNormal';
 import ShoppingCardPremium from '@/src/components/ShoppingCardPremium';
 import ShoppingCardData from '@/data/ShoppingCardData';
+import { useState } from 'react';
+import Modal from '@/src/components/Modal';
+import AvailableTechnologiesModal from '@/src/components/AvailableTechnologiesModal';
 
 const Shopping = () => {
+  const [showAvailableTechnologiesModal, setShowAvailableTechnologiesModal] =
+    useState(false);
+
+  const openAvailableTechnologiesModal = () => {
+    setShowAvailableTechnologiesModal(true);
+  };
+
+  const closeAvailableTechnologiesModal = () => {
+    setShowAvailableTechnologiesModal(false);
+  };
+
   return (
     <section className="max-w-screen pt-20 bg-white pb-20">
       <SectionHeading heading={'Nie czekaj, zacznij naukę już teraz!'} />
@@ -15,6 +29,7 @@ const Shopping = () => {
         <ShoppingCardPremium
           key={ShoppingCardData[2].id}
           {...ShoppingCardData[2]}
+          openAvailableTechnologiesModal={openAvailableTechnologiesModal}
         />
         <ShoppingCardNormal
           key={ShoppingCardData[0].id}
@@ -27,6 +42,12 @@ const Shopping = () => {
         odit architecto maxime suscipit perspiciatis eaque, est voluptate.
         Autem.
       </p>
+      {showAvailableTechnologiesModal ? (
+        <Modal closeModal={closeAvailableTechnologiesModal}>
+          {' '}
+          <AvailableTechnologiesModal />{' '}
+        </Modal>
+      ) : null}
     </section>
   );
 };
