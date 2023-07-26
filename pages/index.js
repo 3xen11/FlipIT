@@ -3,11 +3,9 @@ import Navigation from '@/layout/Navigation';
 import WhyFlashcards from '@/layout/WhyFlashcards';
 import HowItWorks from '@/layout/HowItWorks';
 import Categories from '@/layout/Categories';
-import Pricing from '@/layout/Pricing';
+import Shopping from '@/layout/Shopping';
 import Contact from '@/layout/Contact';
 import Footer from '@/layout/Footer';
-
-import { useGlobalContext } from '@/context/ModalsContext';
 
 const Home = () => {
   return (
@@ -17,7 +15,7 @@ const Home = () => {
       <WhyFlashcards />
       <HowItWorks />
       <Categories />
-      <Pricing />
+      <Shopping />
       <Contact />
       <Footer />
     </>
