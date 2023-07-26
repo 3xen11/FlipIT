@@ -29,7 +29,7 @@ const Pricing = () => {
             <li>d. lorem ipsum dolor sit amet</li>
             <li>e. lorem ipsum dolor sit amet</li>
           </ul>
-          <button className="mt-4 py-4 w-3/5 bg-teal-700 active:scale-95 transition-all">
+          <button className="mt-4 py-4 w-3/5 bg-teal-700 active:scale-95 transition-all hover:bg-white hover:text-teal-700">
             Dodaj do koszyka
           </button>
         </div>
@@ -55,7 +55,7 @@ const Pricing = () => {
             <li>d. lorem ipsum dolor sit amet</li>
             <li>e. lorem ipsum dolor sit amet</li>
           </ul>
-          <button className="mt-4 py-4 w-3/5 bg-teal-700 active:scale-95 transition-all">
+          <button className="mt-4 py-4 w-3/5 bg-teal-700 active:scale-95 transition-all hover:bg-white hover:text-teal-700">
             Dodaj do koszyka
           </button>
         </div>
@@ -77,7 +77,7 @@ const Pricing = () => {
             <li>d. lorem ipsum dolor sit amet</li>
             <li>e. lorem ipsum dolor sit amet</li>
           </ul>
-          <button className="mt-4 py-4 w-3/5 bg-teal-700 active:scale-95 transition-all">
+          <button className="mt-4 py-4 w-3/5 bg-teal-700 active:scale-95 transition-all hover:bg-white hover:text-teal-700">
             Dodaj do koszyka
           </button>
         </div>

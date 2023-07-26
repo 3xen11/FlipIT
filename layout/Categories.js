@@ -1,37 +1,53 @@
 import SectionHeading from '@/src/components/SectionHeading';
-import Technologies from '../data/CategoriesData';
-import Image from 'next/image';
+import Technologies from '../data/CategoriesDescriptionData';
+import Modal from '@/src/components/Modal';
+import { useState } from 'react';
+import TechnologyDescriptionModal from '@/src/components/TechnologyDescriptionModal';
+import TechnologySquare from '@/src/components/TechnologySquare';
 
 const Categories = () => {
-  return (
-    <section className="py-20">
-      <SectionHeading
-        headingAccent={'Regularnie aktualizowana baza pytań i kategorii!'}
-      />
-      <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-4  p-5 ">
-        {Technologies.map((tech) => {
-          const { id, technology, img, available } = tech;
+  const [showDescriptionModal, setShowDescriptionModal] = useState(false);
+  const [chosenTechnology, setChosenTechnology] = useState(null);
 
-          return (
-            <div
-              key={id}
-              className="bg-gradient-to-br from-teal-400  to-teal-600 "
-            >
-              <Image
-                src={img}
-                width={60}
-                height={60}
-                alt={technology}
-                title={`${technology}${!available ? ' - wkrótce' : ''}`}
-                className={` hover:scale-90 active:scale-100 transition-transform p-4 h-24 w-24 cursor-pointer object-contain   shadow-lg
-                  ${!available ? 'grayscale bg-gray-300' : 'bg-white'}
-                `}
+  const closeModal = () => {
+    setShowDescriptionModal(false);
+  };
+
+  const getTechnologyName = (techName) => {
+    const selectedTechnology = Technologies.find(
+      (tech) => tech.technology === techName
+    );
+    setChosenTechnology(selectedTechnology);
+  };
+
+  return (
+    <>
+      <section className="py-20 ">
+        <SectionHeading
+          headingAccent={'Regularnie aktualizowana baza pytań i kategorii!'}
+        />
+
+        <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-4  p-5 ">
+          {Technologies.map((tech) => {
+            return (
+              <TechnologySquare
+                {...tech}
+                key={tech.id}
+                setShowDescriptionModal={setShowDescriptionModal}
+                showDescriptionModal={showDescriptionModal}
+                getTechnologyName={getTechnologyName}
               />
-            </div>
-          );
-        })}
-      </div>
-    </section>
+            );
+          })}
+        </div>
+        {showDescriptionModal && chosenTechnology ? (
+          <Modal closeModal={closeModal}>
+            <TechnologyDescriptionModal {...chosenTechnology} />
+          </Modal>
+        ) : null}
+      </section>
+    </>
   );
 };
+
 export default Categories;

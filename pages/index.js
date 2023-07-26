@@ -6,17 +6,12 @@ import Categories from '@/layout/Categories';
 import Pricing from '@/layout/Pricing';
 import Contact from '@/layout/Contact';
 import Footer from '@/layout/Footer';
-import Modal from '@/src/components/Modal';
-import TechnologyDescriptionModal from '@/src/components/TechnologyDescriptionModal';
-import AvailableTechnologiesModal from '@/src/components/AvailableTechnologiesModal';
+
+import { useGlobalContext } from '@/context/ModalsContext';
 
 const Home = () => {
   return (
     <>
-      {/* <Modal> */}
-      {/* <TechnologyDescriptionModal /> */}
-      {/* <AvailableTechnologiesModal /> */}
-      {/* </Modal> */}
       <Navigation />
       <Header />
       <WhyFlashcards />
