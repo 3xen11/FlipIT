@@ -1,20 +1,21 @@
 import Image from 'next/image';
+import { useDispatch } from 'react-redux';
+import { openDescriptionTechModal } from '@/src/features/modal/modalSlice';
 
 const TechnologySquare = ({
   id,
   img,
   technology,
   available,
-  showDescriptionModal,
-  setShowDescriptionModal,
   getTechnologyName,
 }) => {
+  const dispatch = useDispatch();
   return (
     <div
       key={id}
       className="bg-gradient-to-br from-teal-400  to-teal-600 "
       onClick={() => {
-        setShowDescriptionModal(!showDescriptionModal);
+        dispatch(openDescriptionTechModal());
         getTechnologyName(technology);
       }}
     >

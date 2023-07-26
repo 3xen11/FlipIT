@@ -1,17 +1,14 @@
-import SectionHeading from '@/src/components/SectionHeading';
-import Technologies from '../data/CategoriesDescriptionData';
-import Modal from '@/src/components/Modal';
 import { useState } from 'react';
+import Technologies from '../data/CategoriesDescriptionData';
+import SectionHeading from '@/src/components/SectionHeading';
+import Modal from '@/src/components/Modal';
 import TechnologyDescriptionModal from '@/src/components/TechnologyDescriptionModal';
 import TechnologySquare from '@/src/components/TechnologySquare';
+import { useSelector } from 'react-redux';
 
 const Categories = () => {
-  const [showDescriptionModal, setShowDescriptionModal] = useState(false);
+  const { showDescriptionTechModal } = useSelector((store) => store.modal);
   const [chosenTechnology, setChosenTechnology] = useState(null);
-
-  const closeModal = () => {
-    setShowDescriptionModal(false);
-  };
 
   const getTechnologyName = (techName) => {
     const selectedTechnology = Technologies.find(
@@ -33,15 +30,13 @@ const Categories = () => {
               <TechnologySquare
                 {...tech}
                 key={tech.id}
-                setShowDescriptionModal={setShowDescriptionModal}
-                showDescriptionModal={showDescriptionModal}
                 getTechnologyName={getTechnologyName}
               />
             );
           })}
         </div>
-        {showDescriptionModal && chosenTechnology ? (
-          <Modal closeModal={closeModal}>
+        {showDescriptionTechModal && chosenTechnology ? (
+          <Modal>
             <TechnologyDescriptionModal {...chosenTechnology} />
           </Modal>
         ) : null}

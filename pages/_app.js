@@ -1,10 +1,11 @@
 import '@/styles/globals.css';
-import ModalContext from '@/context/ModalsContext';
+import { store } from '../src/store/store';
+import { Provider } from 'react-redux';
 
 export default function App({ Component, pageProps }) {
   return (
-    <ModalContext>
+    <Provider store={store}>
       <Component {...pageProps} />
-    </ModalContext>
+    </Provider>
   );
 }
