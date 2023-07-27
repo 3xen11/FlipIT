@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { FaUserCircle } from 'react-icons/fa';
@@ -24,9 +25,12 @@ const Navigation = () => {
   return (
     <div className={`bg-white z-10 ${isSticky ? 'sticky top-0' : ''}`}>
       <div className="flex justify-between items-center max-w-7xl h-16 mx-auto px-5">
-        <p className="font-bold text-2xl text-slate-700 cursor-pointer">
+        <Link
+          href="/"
+          className="font-bold text-2xl text-slate-700 cursor-pointer"
+        >
           FISZK<span className="text-teal-500">IT</span>{' '}
-        </p>
+        </Link>
         <ul className="flex gap-8 text-3xl font-bold text-slate-700">
           <li className="cursor-pointer text-lg transition-all hover:text-teal-500 hover:scale-105 active:scale-100">
             Kup teraz
