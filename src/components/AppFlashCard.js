@@ -4,7 +4,7 @@ const AppFlashCard = () => {
   const { randomNumber, data, chosenTechnology } = useSelector(
     (store) => store.question
   );
-  // To trzeba wrzucić w questionSlice.js
+
   const chosenTechnologyQuestions = data.filter(
     (technology) => chosenTechnology === technology.tech
   );
