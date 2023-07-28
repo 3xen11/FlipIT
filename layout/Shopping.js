@@ -6,6 +6,7 @@ import Modal from '@/src/components/Modal';
 import AvailableTechnologiesModal from '@/src/components/AvailableTechnologiesModal';
 import { useSelector } from 'react-redux';
 import { openAvailableTechModal } from '@/src/features/modal/modalSlice';
+import { getRandomNumber } from '@/src/features/questions/questionsSlice';
 
 const Shopping = () => {
   const { showAvailableTechModal } = useSelector((store) => store.modal);
@@ -39,7 +40,7 @@ const Shopping = () => {
       </p>
       {showAvailableTechModal ? (
         <Modal>
-          <AvailableTechnologiesModal />
+          <AvailableTechnologiesModal getRandomNumber={getRandomNumber} />
         </Modal>
       ) : null}
     </section>

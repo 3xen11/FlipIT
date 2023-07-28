@@ -14,7 +14,7 @@ export default [
   },
   {
     id: nanoid(),
-    technology: 'Typescript',
+    technology: 'TypeScript',
     description:
       'TypeScript to nadzbiór języka JavaScript, który wprowadza statyczną typizację do skryptowego środowiska JavaScript. Dzięki temu programiści mogą definiować typy danych, co pomaga w wykrywaniu błędów i ułatwia rozwijanie aplikacji. TypeScript kompiluje się do standardowego JavaScriptu, więc może być używany wszędzie tam, gdzie JavaScript jest obsługiwany. Jest wykorzystywany głównie w dużych projektach i aplikacjach, aby zapewnić większą pewność działania kodu, ułatwić refaktoryzację oraz współpracę między programistami. Dzięki narzędziom takim jak inteligentne podpowiedzi, TypeScript zwiększa wydajność i jakość tworzonego oprogramowania, uczynił się popularnym wyborem w świecie programowania webowego.',
     available: true,
