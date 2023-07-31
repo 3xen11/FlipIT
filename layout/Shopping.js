@@ -10,7 +10,6 @@ import { getRandomNumber } from '@/src/features/questions/questionsSlice';
 
 const Shopping = () => {
   const { showAvailableTechModal } = useSelector((store) => store.modal);
-  console.log();
 
   return (
     <section className="max-w-screen pt-20 bg-white pb-20">

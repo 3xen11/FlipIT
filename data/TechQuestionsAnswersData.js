@@ -222,4 +222,11 @@ export default [
     answer:
       'Type assertion (również znany jako "type casting") pozwala programiście ręcznie określić typ zmiennej, jeśli TypeScript nie jest w stanie go automatycznie wywnioskować. Stosujemy go, gdy wiemy, że zmienna ma określony typ, ale TypeScript nie jest w stanie tego zweryfikować. Można użyć notacji "as" lub "<>" do wyrażenia type assertion. Na przykład: let someValue: any = "To jest wartość typu any"; let strLength: number = (someValue as string).length;',
   },
+  {
+    id: nanoid(),
+    tech: 'TypeScript',
+    question: 'Czym jest "type assertion" w TypeScript i kiedy go stosować?',
+    answer:
+      'Type assertion (również znany jako "type casting") pozwala programiście ręcznie określić typ zmiennej, jeśli TypeScript nie jest w stanie go automatycznie wywnioskować. Stosujemy go, gdy wiemy, że zmienna ma określony typ, ale TypeScript nie jest w stanie tego zweryfikować. Można użyć notacji "as" lub "<>" do wyrażenia type assertion. Na przykład: let someValue: any = "To jest wartość typu any"; let strLength: number = (someValue as string).length;',
+  },
 ];

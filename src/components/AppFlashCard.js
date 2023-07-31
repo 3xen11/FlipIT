@@ -1,9 +1,16 @@
-import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { choseTechnology } from '../features/questions/questionsSlice';
 
 const AppFlashCard = () => {
-  const { randomNumber, data, chosenTechnology } = useSelector(
-    (store) => store.question
-  );
+  const { randomNumber, data, chosenTechnology, chosenTechnologyArray } =
+    useSelector((store) => store.question);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(choseTechnology());
+  }, [chosenTechnology, randomNumber]);
 
   const chosenTechnologyQuestions = data.filter(
     (technology) => chosenTechnology === technology.tech
