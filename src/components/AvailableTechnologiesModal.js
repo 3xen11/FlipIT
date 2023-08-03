@@ -1,13 +1,10 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import Technologies from '../../data/CategoriesDescriptionData';
 import Image from 'next/image';
-import { changeTechnology } from '../features/questions/questionsSlice';
 
-const AvailableTechnologiesModal = ({ getRandomNumber }) => {
-  const dispatch = useDispatch();
+const AvailableTechnologiesModal = ({ getTechnologyArray }) => {
   const AvailableTechs = Technologies.filter((tech) => tech.available === true);
-  const { showAvailableTechModal } = useSelector((store) => store.modal);
-
+  const dispatch = useDispatch();
   return (
     <div className="flex flex-col  flex-wrap gap-4 justify-around  h-1/2 items-center">
       <h3 className="p-4 text-5xl font-bold">Dostępne Technologie:</h3>
@@ -19,10 +16,6 @@ const AvailableTechnologiesModal = ({ getRandomNumber }) => {
             <div
               key={id}
               className="bg-gradient-to-br from-teal-400  to-teal-600 "
-              onClick={() => {
-                !showAvailableTechModal ? dispatch(getRandomNumber()) : null;
-                dispatch(changeTechnology(technology));
-              }}
             >
               <Image
                 src={img}
@@ -33,6 +26,7 @@ const AvailableTechnologiesModal = ({ getRandomNumber }) => {
                 className={` hover:scale-90 active:scale-100 transition-transform p-4 h-24 w-24 cursor-pointer object-contain shadow-lg
                   ${!available ? 'grayscale bg-gray-300' : 'bg-white'}
                 `}
+                onClick={() => dispatch(getTechnologyArray(technology))}
               />
             </div>
           );

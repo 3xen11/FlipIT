@@ -6,7 +6,7 @@ import Modal from '@/src/components/Modal';
 import AvailableTechnologiesModal from '@/src/components/AvailableTechnologiesModal';
 import { useSelector } from 'react-redux';
 import { openAvailableTechModal } from '@/src/features/modal/modalSlice';
-import { getRandomNumber } from '@/src/features/questions/questionsSlice';
+import { getRandomNumber } from '@/src/features/questions/questionSlice';
 
 const Shopping = () => {
   const { showAvailableTechModal } = useSelector((store) => store.modal);

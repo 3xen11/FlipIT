@@ -3,6 +3,7 @@ import { nanoid } from 'nanoid';
 export default [
   {
     id: nanoid(),
+    known: false,
     tech: 'JavaScript',
     question:
       'Czym różnią się zmienne zadeklarowane przy użyciu "var", "let" i "const"?',
@@ -11,6 +12,7 @@ export default [
   },
   {
     id: nanoid(),
+    known: false,
     tech: 'JavaScript',
     question:
       'Wyjaśnij, czym są domknięcia (closures) w JavaScript i jakie mają zastosowanie?',
@@ -19,6 +21,7 @@ export default [
   },
   {
     id: nanoid(),
+    known: false,
     tech: 'JavaScript',
     question: 'Co to są obietnice (promises) w JavaScript i jak działają?',
     answer:
@@ -26,6 +29,7 @@ export default [
   },
   {
     id: nanoid(),
+    known: false,
     tech: 'JavaScript',
     question: 'Co to jest zjawisko "hoisting" w JavaScript?',
     answer:
@@ -33,6 +37,7 @@ export default [
   },
   {
     id: nanoid(),
+    known: false,
     tech: 'JavaScript',
     question:
       'Wyjaśnij różnicę między "==" a "==="? Kiedy powinno się używać każdego z nich?',
@@ -41,6 +46,7 @@ export default [
   },
   {
     id: nanoid(),
+    known: false,
     tech: 'JavaScript',
     question: 'Jak działa mechanizm "event bubbling" w przeglądarce?',
     answer:
@@ -48,6 +54,7 @@ export default [
   },
   {
     id: nanoid(),
+    known: false,
     tech: 'JavaScript',
     question:
       'Jak można uniknąć problemów związanych z "callback hell" w JavaScript?',
@@ -56,6 +63,7 @@ export default [
   },
   {
     id: nanoid(),
+    known: false,
     tech: 'JavaScript',
     question:
       'Jakie są różnice między tworzeniem elementów DOM przy użyciu "innerHTML" a "createElement"?',
@@ -64,6 +72,7 @@ export default [
   },
   {
     id: nanoid(),
+    known: false,
     tech: 'JavaScript',
     question: 'Co to jest Event Loop w JavaScript?',
     answer:
@@ -71,6 +80,7 @@ export default [
   },
   {
     id: nanoid(),
+    known: false,
     tech: 'JavaScript',
     question:
       'Wyjaśnij, czym są strzałkowe funkcje (arrow functions) i w jakich sytuacjach są użyteczne?',
@@ -79,6 +89,7 @@ export default [
   },
   {
     id: nanoid(),
+    known: false,
     tech: 'React',
     question: 'Czym jest React i jakie są jego główne cechy?',
     answer:
@@ -86,6 +97,7 @@ export default [
   },
   {
     id: nanoid(),
+    known: false,
     tech: 'React',
     question:
       'Jakie są różnice między komponentami funkcyjnymi a klasowymi w React?',
@@ -94,6 +106,7 @@ export default [
   },
   {
     id: nanoid(),
+    known: false,
     tech: 'React',
     question: 'Czym jest JSX?',
     answer:
@@ -101,6 +114,7 @@ export default [
   },
   {
     id: nanoid(),
+    known: false,
     tech: 'React',
     question: 'Co to jest stan (state) w React i jak go używać?',
     answer:
@@ -108,6 +122,7 @@ export default [
   },
   {
     id: nanoid(),
+    known: false,
     tech: 'React',
     question:
       'Co to są komponenty kontrolowane (controlled components) i niekontrolowane (uncontrolled components) w React?',
@@ -116,6 +131,7 @@ export default [
   },
   {
     id: nanoid(),
+    known: false,
     tech: 'React',
     question: 'Jakie są cykle życia (lifecycle) komponentu klasowego w React?',
     answer:
@@ -123,6 +139,7 @@ export default [
   },
   {
     id: nanoid(),
+    known: false,
     tech: 'React',
     question:
       'Co to są hooki (hooks) w React i jakie są najczęściej używane hooki?',
@@ -131,6 +148,7 @@ export default [
   },
   {
     id: nanoid(),
+    known: false,
     tech: 'React',
     question: 'Czym jest React Router i jak go używać?',
     answer:
@@ -138,6 +156,7 @@ export default [
   },
   {
     id: nanoid(),
+    known: false,
     tech: 'React',
     question: 'Jakie są zalety użycia Redux w połączeniu z React?',
     answer:
@@ -145,6 +164,7 @@ export default [
   },
   {
     id: nanoid(),
+    known: false,
     tech: 'React',
     question: 'Co to są styled-components w React?',
     answer:
@@ -152,6 +172,7 @@ export default [
   },
   {
     id: nanoid(),
+    known: false,
     tech: 'TypeScript',
     question:
       'Czym różnią się zmienne zadeklarowane przy użyciu "var", "let" i "const"?',
@@ -160,6 +181,7 @@ export default [
   },
   {
     id: nanoid(),
+    known: false,
     tech: 'TypeScript',
     question: 'Jakie są podstawowe typy danych w TypeScript?',
     answer:
@@ -167,6 +189,7 @@ export default [
   },
   {
     id: nanoid(),
+    known: false,
     tech: 'TypeScript',
     question:
       'Jak definiować typowanie dla tablicy zawierającej liczby całkowite?',
@@ -175,6 +198,7 @@ export default [
   },
   {
     id: nanoid(),
+    known: false,
     tech: 'TypeScript',
     question: 'Co to są interfejsy w TypeScript i jak ich używać?',
     answer:
@@ -182,6 +206,7 @@ export default [
   },
   {
     id: nanoid(),
+    known: false,
     tech: 'TypeScript',
     question: 'Czym różnią się interfejsy od typów aliasów?',
     answer:
@@ -189,6 +214,7 @@ export default [
   },
   {
     id: nanoid(),
+    known: false,
     tech: 'TypeScript',
     question: 'Co to jest "generics" w TypeScript i jak ich używać?',
     answer:
@@ -196,6 +222,7 @@ export default [
   },
   {
     id: nanoid(),
+    known: false,
     tech: 'TypeScript',
     question: 'Jak działa "nullable types" w TypeScript?',
     answer:
@@ -203,6 +230,7 @@ export default [
   },
   {
     id: nanoid(),
+    known: false,
     tech: 'TypeScript',
     question: 'Co to jest "enum" w TypeScript i jak go używać?',
     answer:
@@ -210,6 +238,7 @@ export default [
   },
   {
     id: nanoid(),
+    known: false,
     tech: 'TypeScript',
     question: 'Jak działa "union type" w TypeScript?',
     answer:
@@ -217,6 +246,7 @@ export default [
   },
   {
     id: nanoid(),
+    known: false,
     tech: 'TypeScript',
     question: 'Czym jest "type assertion" w TypeScript i kiedy go stosować?',
     answer:
@@ -224,6 +254,7 @@ export default [
   },
   {
     id: nanoid(),
+    known: true,
     tech: 'TypeScript',
     question: 'Czym jest "type assertion" w TypeScript i kiedy go stosować?',
     answer:
