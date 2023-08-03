@@ -6,7 +6,8 @@ const initialState = {
   index: 0,
   questions: QuestionsData,
   technology: 'JavaScript',
-  technologyArray: QuestionsData, // tutaj wepchnąć jakoś przefiltrowaną tablicę z pytaniami z JS'a
+  technologyArray: QuestionsData,
+  questionId: null,
 };
 
 const questionSlice = createSlice({
@@ -29,22 +30,24 @@ const questionSlice = createSlice({
 
     markAsKnown: (state) => {
       if (state.maxIndex === 0) return;
-      state.technologyArray = state.questions.filter(
-        (tech) => state.technology === tech.tech && tech.known === false
+
+      const questionIdToMarkAsKnown = state.questionId;
+      const filteredTechArray = state.technologyArray.filter(
+        (tech) => tech.id !== questionIdToMarkAsKnown
       );
 
-      // to można uprościć
-      const newTechArray = state.technologyArray.map((tech, idx) => {
-        return idx === state.index
-          ? {
-              ...tech,
-              known: true,
-            }
-          : tech;
-      });
+      state.technologyArray = filteredTechArray;
+      state.maxIndex = filteredTechArray.length;
+      const updatedQuestions = state.questions.map((question) =>
+        question.id === questionIdToMarkAsKnown
+          ? { ...question, known: true }
+          : question
+      );
+      state.questions = updatedQuestions;
+    },
 
-      state.maxIndex = newTechArray.filter((tech) => !tech.known).length;
-      state.technologyArray[state.index].known = true;
+    getQuestionId: (state, action) => {
+      state.questionId = action.payload;
     },
 
     resetCategory: (state) => {
@@ -54,11 +57,13 @@ const questionSlice = createSlice({
 });
 
 export const {
+  getQuestionId,
   markAsKnown,
   getRandomIndex,
   index,
   getTechnologyArray,
   technologyArray,
+  knownQuestions,
 } = questionSlice.actions;
 
 export default questionSlice.reducer;

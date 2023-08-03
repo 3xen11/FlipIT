@@ -1,10 +1,17 @@
 import { useDispatch } from 'react-redux';
 import Technologies from '../../data/CategoriesDescriptionData';
 import Image from 'next/image';
+import { useEffect } from 'react';
 
 const AvailableTechnologiesModal = ({ getTechnologyArray }) => {
   const AvailableTechs = Technologies.filter((tech) => tech.available === true);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    const defaultTechnology = 'JavaScript';
+    dispatch(getTechnologyArray(defaultTechnology));
+  }, []);
+
   return (
     <div className="flex flex-col  flex-wrap gap-4 justify-around  h-1/2 items-center">
       <h3 className="p-4 text-5xl font-bold">Dostępne Technologie:</h3>

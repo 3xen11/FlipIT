@@ -1,4 +1,4 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import AppFlashCard from '@/src/components/AppFlashCard';
 import AvailableTechnologiesModal from '@/src/components/AvailableTechnologiesModal';
@@ -8,12 +8,20 @@ import {
   markAsKnown,
   getRandomIndex,
   getTechnologyArray,
+  getQuestionId,
 } from '@/src/features/questions/questionSlice';
+import { useEffect } from 'react';
 
 const Application = () => {
   const { index, technologyArray, maxIndex } = useSelector(
     (store) => store.question
   );
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    maxIndex && dispatch(getQuestionId(technologyArray[index].id));
+  }, [index, maxIndex]);
 
   return (
     <section className="max-w-screen mt-10 py-20 text-center">

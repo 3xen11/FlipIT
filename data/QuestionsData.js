@@ -170,15 +170,7 @@ export default [
     answer:
       'styled-components to biblioteka, która pozwala na pisanie styli dla komponentów w React za pomocą składni podobnej do CSS, ale z możliwością używania zmiennych JavaScript i dynamicznych styli. Jest to podejście oparte na CSS-in-JS, które pozwala na lepsze zarządzanie stylami i reużywalność komponentów.',
   },
-  {
-    id: nanoid(),
-    known: false,
-    tech: 'TypeScript',
-    question:
-      'Czym różnią się zmienne zadeklarowane przy użyciu "var", "let" i "const"?',
-    answer:
-      'Zmienne zadeklarowane przy użyciu "var" są hoistowane i mają zakres funkcji, natomiast zmienne zadeklarowane przy użyciu "let" i "const" mają blokowy zakres i nie są hoistowane. "const" tworzy zmienną stałą, której wartość nie może być zmieniona po przypisaniu, a "let" pozwala na zmianę wartości po zadeklarowaniu.',
-  },
+
   {
     id: nanoid(),
     known: false,
@@ -224,6 +216,15 @@ export default [
     id: nanoid(),
     known: false,
     tech: 'TypeScript',
+    question:
+      'Czym różnią się zmienne zadeklarowane przy użyciu "var", "let" i "const"?',
+    answer:
+      'Zmienne zadeklarowane przy użyciu "var" są hoistowane i mają zakres funkcji, natomiast zmienne zadeklarowane przy użyciu "let" i "const" mają blokowy zakres i nie są hoistowane. "const" tworzy zmienną stałą, której wartość nie może być zmieniona po przypisaniu, a "let" pozwala na zmianę wartości po zadeklarowaniu.',
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'TypeScript',
     question: 'Jak działa "nullable types" w TypeScript?',
     answer:
       'Typy nullable (możliwe do przyjęcia wartości null lub undefined) można zadeklarować za pomocą dodania znaku "?" na końcu typu. Na przykład: let name: string | null = null; Oznacza to, że zmienna "name" może przechowywać wartość typu "string" lub wartość "null".',
@@ -247,14 +248,6 @@ export default [
   {
     id: nanoid(),
     known: false,
-    tech: 'TypeScript',
-    question: 'Czym jest "type assertion" w TypeScript i kiedy go stosować?',
-    answer:
-      'Type assertion (również znany jako "type casting") pozwala programiście ręcznie określić typ zmiennej, jeśli TypeScript nie jest w stanie go automatycznie wywnioskować. Stosujemy go, gdy wiemy, że zmienna ma określony typ, ale TypeScript nie jest w stanie tego zweryfikować. Można użyć notacji "as" lub "<>" do wyrażenia type assertion. Na przykład: let someValue: any = "To jest wartość typu any"; let strLength: number = (someValue as string).length;',
-  },
-  {
-    id: nanoid(),
-    known: true,
     tech: 'TypeScript',
     question: 'Czym jest "type assertion" w TypeScript i kiedy go stosować?',
     answer:
