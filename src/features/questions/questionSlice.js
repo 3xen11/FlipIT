@@ -6,7 +6,7 @@ const initialState = {
   index: 0,
   questions: QuestionsData,
   technology: 'JavaScript',
-  technologyArray: QuestionsData,
+  technologyArray: [],
   questionId: null,
 };
 

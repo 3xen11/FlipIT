@@ -20,9 +20,10 @@ const Application = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    maxIndex && dispatch(getQuestionId(technologyArray[index].id));
+    maxIndex && dispatch(getQuestionId(technologyArray[index]?.id));
   }, [index, maxIndex]);
 
+  console.log(technologyArray);
   return (
     <section className="max-w-screen mt-10 py-20 text-center">
       <div className="scale-75">
