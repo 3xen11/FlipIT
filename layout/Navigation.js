@@ -33,13 +33,17 @@ const Navigation = () => {
         </Link>
         <ul className="flex gap-8 text-3xl font-bold text-slate-700">
           <li className="cursor-pointer text-lg transition-all hover:text-teal-500 hover:scale-105 active:scale-100">
-            Kup teraz
+            <Link href="/">Kup teraz</Link>
           </li>
           <li className="cursor-pointer transition-all hover:text-teal-500 hover:scale-105 active:scale-100">
-            <AiOutlineShoppingCart />
+            <Link href="/cart">
+              <AiOutlineShoppingCart />
+            </Link>
           </li>
           <li className="cursor-pointer transition-all hover:text-teal-500 hover:scale-105 active:scale-100">
-            <FaUserCircle />
+            <Link href="/signin">
+              <FaUserCircle />
+            </Link>
           </li>
         </ul>
       </div>
