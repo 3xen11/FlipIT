@@ -5,7 +5,7 @@ import Footer from '@/layout/Footer';
 const app = () => {
   return (
     <>
-      <Navigation />;
+      <Navigation />
       <App />
       <Footer />
     </>

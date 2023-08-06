@@ -1,4 +1,5 @@
 import SectionHeading from '@/src/components/SectionHeading';
+import ShoppingCardBasic from '@/src/components/ShoppingCardBasic';
 import ShoppingCardNormal from '@/src/components/ShoppingCardNormal';
 import ShoppingCardPremium from '@/src/components/ShoppingCardPremium';
 import ShoppingCardData from '@/data/ShoppingCardData';
@@ -25,7 +26,7 @@ const Shopping = () => {
           {...ShoppingCardData[2]}
           openAvailableTechModal={openAvailableTechModal}
         />
-        <ShoppingCardNormal
+        <ShoppingCardBasic
           key={ShoppingCardData[0].id}
           {...ShoppingCardData[0]}
           openAvailableTechModal={openAvailableTechModal}
