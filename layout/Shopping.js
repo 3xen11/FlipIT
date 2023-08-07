@@ -16,18 +16,22 @@ import AvailableTechnologiesModal from '@/src/components/AvailableTechnologiesMo
 // Slices
 import { openAvailableTechModal } from '@/src/features/modal/modalSlice';
 import { getRandomNumber } from '@/src/features/questions/questionSlice';
-import { getId, changeIcon } from '@/src/features/cart/cartSlice';
+import { getId, changeIcon, addToCart } from '@/src/features/cart/cartSlice';
 
 const Shopping = () => {
   const dispatch = useDispatch();
   const { showAvailableTechModal } = useSelector((store) => store.modal);
-  const { buttons, button, id } = useSelector((store) => store.cart);
+  const { buttons, button, id, cartItems } = useSelector((store) => store.cart);
+
+  // console.log();
 
   useEffect(() => {
     const buttonId = id;
     const newIcon = button;
     dispatch(changeIcon({ buttonId, newIcon }));
   }, [button]);
+
+  console.log(cartItems);
 
   return (
     <section className="max-w-screen pt-20 bg-white pb-20">
@@ -56,6 +60,7 @@ const Shopping = () => {
           buttons={buttons.basic}
           getId={getId}
           dispatch={dispatch}
+          addToCart={addToCart}
         />
       </div>
       <p className="max-w-7xl mx-auto mt-20 text-center px-12 xl:px-0">

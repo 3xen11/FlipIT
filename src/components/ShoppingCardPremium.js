@@ -1,3 +1,4 @@
+import { BsPlusCircle } from 'react-icons/bs';
 const ShoppingCardPremium = ({
   id,
   shoppingPackage,
@@ -27,7 +28,13 @@ const ShoppingCardPremium = ({
                 dispatch(getId(id));
               }}
             >
-              {!newIcon ? icon : newIcon}
+              {!newIcon ? (
+                icon === 'BsPlusCircle' ? (
+                  <BsPlusCircle className="h-8 w-8" />
+                ) : null
+              ) : (
+                newIcon
+              )}
             </div>
           );
         })}

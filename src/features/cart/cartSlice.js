@@ -1,45 +1,45 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { BsPlusCircle } from 'react-icons/bs';
 
 const initialState = {
   id: 'standard1',
   button: null,
-  cartItems: {},
+  cartItems: [],
   total: 0,
+  cartPosition: 0,
   buttons: {
     basic: [
       {
         id: 'basic1',
-        icon: <BsPlusCircle className="h-8 w-8" />,
+        icon: 'BsPlusCircle',
         newIcon: null,
       },
     ],
     standard: [
       {
         id: 'standard1',
-        icon: <BsPlusCircle className="h-8 w-8" />,
+        icon: 'BsPlusCircle',
         newIcon: null,
       },
       {
         id: 'standard2',
-        icon: <BsPlusCircle className="h-8 w-8" />,
+        icon: 'BsPlusCircle',
         newIcon: null,
       },
     ],
     premium: [
       {
         id: 'premium1',
-        icon: <BsPlusCircle className="h-8 w-8" />,
+        icon: 'BsPlusCircle',
         newIcon: null,
       },
       {
         id: 'premium2',
-        icon: <BsPlusCircle className="h-8 w-8" />,
+        icon: 'BsPlusCircle',
         newIcon: null,
       },
       {
         id: 'premium3',
-        icon: <BsPlusCircle className="h-8 w-8" />,
+        icon: 'BsPlusCircle',
         newIcon: null,
       },
     ],
@@ -73,10 +73,34 @@ const cartSlice = createSlice({
     getId: (state, action) => {
       state.id = action.payload;
     },
+    addToCart: (state, action) => {
+      const groupId = action.payload;
+      if (groupId === 'basic') {
+        if (state.buttons.basic[0].newIcon !== null) {
+          const newItem = {
+            title: 'Pakiet BASIC:',
+            icons: [state.button],
+            cost: 20,
+          };
+
+          state.cartItems = [...state.cartItems, newItem];
+        } else return;
+      }
+      state.buttons.basic[0].newIcon = null;
+      state.button = null;
+    },
   },
 });
 
-export const { changeIcon, buttons, button, getIcon, getId, id } =
-  cartSlice.actions;
+export const {
+  changeIcon,
+  buttons,
+  button,
+  getIcon,
+  getId,
+  id,
+  cartItems,
+  addToCart,
+} = cartSlice.actions;
 
 export default cartSlice.reducer;

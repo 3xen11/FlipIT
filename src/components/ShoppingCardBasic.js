@@ -1,3 +1,5 @@
+import { BsPlusCircle } from 'react-icons/bs';
+
 const ShoppingCard = ({
   id,
   shoppingPackage,
@@ -6,7 +8,9 @@ const ShoppingCard = ({
   buttons,
   getId,
   dispatch,
+  addToCart,
 }) => {
+  const key = 'basic';
   return (
     <div
       key={id}
@@ -27,7 +31,13 @@ const ShoppingCard = ({
                 dispatch(getId(id));
               }}
             >
-              {!newIcon ? icon : newIcon}
+              {!newIcon ? (
+                icon === 'BsPlusCircle' ? (
+                  <BsPlusCircle className="h-8 w-8" />
+                ) : null
+              ) : (
+                newIcon
+              )}
             </div>
           );
         })}
@@ -37,7 +47,12 @@ const ShoppingCard = ({
           return <li key={i}>{c}</li>;
         })}
       </ul>
-      <button className="mt-4 py-4 w-3/5 bg-teal-700 active:scale-95 transition-all hover:bg-white hover:text-teal-700">
+      <button
+        onClick={() => {
+          dispatch(addToCart(key));
+        }}
+        className="mt-4 py-4 w-3/5 bg-teal-700 active:scale-95 transition-all hover:bg-white hover:text-teal-700"
+      >
         Dodaj do koszyka
       </button>
     </div>
