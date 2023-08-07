@@ -75,18 +75,63 @@ const cartSlice = createSlice({
     },
     addToCart: (state, action) => {
       const groupId = action.payload;
+      //  BASIC
       if (groupId === 'basic') {
         if (state.buttons.basic[0].newIcon !== null) {
           const newItem = {
             title: 'Pakiet BASIC:',
-            icons: [state.button],
+            icons: [state.buttons.basic[0].newIcon],
             cost: 20,
           };
 
           state.cartItems = [...state.cartItems, newItem];
+          state.buttons.basic[0].newIcon = null;
         } else return;
       }
-      state.buttons.basic[0].newIcon = null;
+
+      // STANDARD
+      if (groupId === 'standard') {
+        if (
+          state.buttons.standard[0].newIcon !== null &&
+          state.buttons.standard[1].newIcon !== null
+        ) {
+          const newItem = {
+            title: 'Pakiet STANDARD:',
+            icons: [
+              state.buttons.standard[0].newIcon,
+              state.buttons.standard[1].newIcon,
+            ],
+            cost: 35,
+          };
+
+          state.cartItems = [...state.cartItems, newItem];
+          state.buttons.standard[0].newIcon = null;
+          state.buttons.standard[1].newIcon = null;
+        } else return;
+      }
+      // PREMIUM
+      if (groupId === 'premium') {
+        if (
+          state.buttons.premium[0].newIcon !== null &&
+          state.buttons.premium[1].newIcon !== null &&
+          state.buttons.premium[2].newIcon !== null
+        ) {
+          const newItem = {
+            title: 'Pakiet PREMIUM:',
+            icons: [
+              state.buttons.premium[0].newIcon,
+              state.buttons.premium[1].newIcon,
+              state.buttons.premium[2].newIcon,
+            ],
+            cost: 50,
+          };
+
+          state.cartItems = [...state.cartItems, newItem];
+          state.buttons.premium[0].newIcon = null;
+          state.buttons.premium[1].newIcon = null;
+          state.buttons.premium[2].newIcon = null;
+        } else return;
+      }
       state.button = null;
     },
   },

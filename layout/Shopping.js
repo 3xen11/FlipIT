@@ -44,6 +44,7 @@ const Shopping = () => {
           buttons={buttons.standard}
           getId={getId}
           dispatch={dispatch}
+          addToCart={addToCart}
         />
         <ShoppingCardPremium
           key={ShoppingCardData[2].id}
@@ -52,6 +53,7 @@ const Shopping = () => {
           buttons={buttons.premium}
           getId={getId}
           dispatch={dispatch}
+          addToCart={addToCart}
         />
         <ShoppingCardBasic
           key={ShoppingCardData[0].id}

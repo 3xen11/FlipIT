@@ -8,18 +8,16 @@ const Cart = () => {
     <section className="grow ">
       <div className="max-w-7xl mx-auto mt-20 ">
         {cartItems.map((cartItem) => {
-          const { cost, icons, title } = cartItem; // Extract 'cost' and 'icons' from 'cartItem'
-          const { alt, src } = icons[0].props;
+          const { cost, icons, title } = cartItem;
 
           return (
             <CartPosition
               cost={cost}
-              alt={alt}
-              src={src}
+              icons={icons}
               key={cartItem.id}
               title={title}
             />
-          ); // Add 'key' prop
+          );
         })}
       </div>
     </section>

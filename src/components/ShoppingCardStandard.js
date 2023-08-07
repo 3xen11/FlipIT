@@ -7,7 +7,10 @@ const ShoppingCard = ({
   getId,
   buttons,
   dispatch,
+  addToCart,
 }) => {
+  const key = 'standard';
+
   return (
     <div
       key={id}
@@ -44,7 +47,12 @@ const ShoppingCard = ({
           return <li key={i}>{c}</li>;
         })}
       </ul>
-      <button className="mt-4 py-4 w-3/5 bg-teal-700 active:scale-95 transition-all hover:bg-white hover:text-teal-700">
+      <button
+        onClick={() => {
+          dispatch(addToCart(key));
+        }}
+        className="mt-4 py-4 w-3/5 bg-teal-700 active:scale-95 transition-all hover:bg-white hover:text-teal-700"
+      >
         Dodaj do koszyka
       </button>
     </div>
