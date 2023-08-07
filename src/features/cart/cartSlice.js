@@ -52,10 +52,9 @@ const cartSlice = createSlice({
 
   reducers: {
     changeIcon: (state, action) => {
-      console.log(action);
       const { buttonId, newIcon } = action.payload;
-
       state.id = buttonId;
+
       const group = buttonId.slice(0, -1);
       const buttonToUpdate = state.buttons[group].find(
         (button) => button.id === buttonId

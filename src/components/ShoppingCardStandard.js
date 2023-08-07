@@ -1,13 +1,12 @@
-import { BsPlusCircle } from 'react-icons/bs';
-import { useDispatch } from 'react-redux';
-
 const ShoppingCard = ({
   id,
   shoppingPackage,
   content,
   openAvailableTechModal,
+  getId,
+  buttons,
+  dispatch,
 }) => {
-  const dispatch = useDispatch();
   return (
     <div
       key={id}
@@ -17,18 +16,21 @@ const ShoppingCard = ({
         <p className="tracking-widest uppercase">{shoppingPackage}</p>
       </div>
       <div className="flex  w-full mt-24 justify-around ">
-        <div
-          className="h-16 w-16 active:scale-95 transition-all cursor-pointer flex items-center justify-center bg-teal-700"
-          onClick={() => dispatch(openAvailableTechModal())}
-        >
-          <BsPlusCircle className="h-8 w-8  " />
-        </div>
-        <div
-          className="h-16 w-16 active:scale-95 transition-all cursor-pointer flex items-center justify-center bg-teal-700"
-          onClick={() => dispatch(openAvailableTechModal())}
-        >
-          <BsPlusCircle className="h-8 w-8  " />
-        </div>
+        {buttons.map((btn) => {
+          const { id, icon, newIcon } = btn;
+          return (
+            <div
+              key={id}
+              className="h-16 w-16 active:scale-95 transition-all cursor-pointer flex items-center justify-center bg-teal-600"
+              onClick={() => {
+                dispatch(openAvailableTechModal());
+                dispatch(getId(id));
+              }}
+            >
+              {!newIcon ? icon : newIcon}
+            </div>
+          );
+        })}
       </div>
       <ul className="leading-8 mt-4 w-full tracking-wide">
         {content.map((c, i) => {

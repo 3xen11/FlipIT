@@ -1,30 +1,12 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { changeIcon } from '../features/cart/cartSlice';
-import { useEffect } from 'react';
-import { getId } from '../features/cart/cartSlice';
-
 const ShoppingCardPremium = ({
   id,
   shoppingPackage,
   content,
   openAvailableTechModal,
   buttons,
-  button,
+  getId,
+  dispatch,
 }) => {
-  const dispatch = useDispatch();
-
-  const buttonIcon = useSelector((store) => store.cart.button);
-  const buttonIds = useSelector((store) => store.cart.id);
-  console.log(buttonIcon);
-
-  useEffect(() => {
-    const buttonId = buttonIds; // Przykład ID przycisku
-    const newIcon = buttonIcon; // Użyj zaktualizowanej ikony
-    dispatch(changeIcon({ buttonId, newIcon }));
-  }, [buttonIcon]);
-
-  console.log('tutej: ' + buttonIds);
-
   return (
     <div
       key={id}
@@ -34,8 +16,8 @@ const ShoppingCardPremium = ({
         <p className="tracking-widest uppercase">{shoppingPackage}</p>
       </div>
       <div className="flex  w-full mt-24 justify-around ">
-        {buttons.map((buttonz) => {
-          const { id, icon, newIcon } = buttonz;
+        {buttons.map((btn) => {
+          const { id, icon, newIcon } = btn;
           return (
             <div
               key={id}
@@ -43,7 +25,6 @@ const ShoppingCardPremium = ({
               onClick={() => {
                 dispatch(openAvailableTechModal());
                 dispatch(getId(id));
-                console.log(button);
               }}
             >
               {!newIcon ? icon : newIcon}
