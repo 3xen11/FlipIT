@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 import Technologies from '../../data/CategoriesDescriptionData';
 import Image from 'next/image';
 import { useEffect } from 'react';
-import { BrowserRouter as Router, Route, useLocation } from 'react-router-dom';
+import { getIcon } from '../features/cart/cartSlice';
 
 const AvailableTechnologiesModal = ({ getTechnologyArray }) => {
   const AvailableTechs = Technologies.filter((tech) => tech.available === true);
@@ -35,10 +35,21 @@ const AvailableTechnologiesModal = ({ getTechnologyArray }) => {
                 className={` hover:scale-90 active:scale-100 transition-transform p-4 h-24 w-24 cursor-pointer object-contain shadow-lg
                   ${!available ? 'grayscale bg-gray-300' : 'bg-white'}
                 `}
-                onClick={() =>
+                onClick={() => {
                   window.location.pathname === '/application' &&
-                  dispatch(getTechnologyArray(technology))
-                }
+                    dispatch(getTechnologyArray(technology));
+                  dispatch(
+                    getIcon(
+                      <Image
+                        src={img}
+                        width={60}
+                        height={60}
+                        alt={technology}
+                        className="bg-white w-16 h-16 p-1"
+                      />
+                    )
+                  );
+                }}
               />
             </div>
           );

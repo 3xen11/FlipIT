@@ -11,7 +11,7 @@ import { getRandomNumber } from '@/src/features/questions/questionSlice';
 
 const Shopping = () => {
   const { showAvailableTechModal } = useSelector((store) => store.modal);
-
+  const { buttons, button } = useSelector((store) => store.cart);
   return (
     <section className="max-w-screen pt-20 bg-white pb-20">
       <SectionHeading heading={'Nie czekaj, zacznij naukę już teraz!'} />
@@ -25,6 +25,8 @@ const Shopping = () => {
           key={ShoppingCardData[2].id}
           {...ShoppingCardData[2]}
           openAvailableTechModal={openAvailableTechModal}
+          buttons={buttons.premium}
+          button={button}
         />
         <ShoppingCardBasic
           key={ShoppingCardData[0].id}

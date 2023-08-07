@@ -21,7 +21,7 @@ const ShoppingCard = ({
           className="h-16 w-16 active:scale-95 transition-all cursor-pointer flex items-center justify-center bg-teal-700"
           onClick={() => dispatch(openAvailableTechModal())}
         >
-          <BsPlusCircle className="h-8 w-8  " />
+          <BsPlusCircle className="h-8 w-8" />
         </div>
       </div>
       <ul className="leading-8 mt-4 w-full tracking-wide">

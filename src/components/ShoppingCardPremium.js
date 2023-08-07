@@ -1,14 +1,29 @@
-import { BsPlusCircle } from 'react-icons/bs';
 import { useDispatch, useSelector } from 'react-redux';
+import { changeIcon } from '../features/cart/cartSlice';
+import { useEffect } from 'react';
+import { getId } from '../features/cart/cartSlice';
 
 const ShoppingCardPremium = ({
   id,
   shoppingPackage,
   content,
   openAvailableTechModal,
+  buttons,
+  button,
 }) => {
-  const { showModal, hideModal } = useSelector((store) => store.modal);
   const dispatch = useDispatch();
+
+  const buttonIcon = useSelector((store) => store.cart.button);
+  const buttonIds = useSelector((store) => store.cart.id);
+  console.log(buttonIcon);
+
+  useEffect(() => {
+    const buttonId = buttonIds; // Przykład ID przycisku
+    const newIcon = buttonIcon; // Użyj zaktualizowanej ikony
+    dispatch(changeIcon({ buttonId, newIcon }));
+  }, [buttonIcon]);
+
+  console.log('tutej: ' + buttonIds);
 
   return (
     <div
@@ -19,31 +34,29 @@ const ShoppingCardPremium = ({
         <p className="tracking-widest uppercase">{shoppingPackage}</p>
       </div>
       <div className="flex  w-full mt-24 justify-around ">
-        <div
-          className="h-16 w-16 active:scale-95 transition-all cursor-pointer flex items-center justify-center bg-teal-700"
-          onClick={() => dispatch(openAvailableTechModal())}
-        >
-          <BsPlusCircle className="h-8 w-8" />
-        </div>
-        <div
-          className="h-16 w-16 active:scale-95 transition-all cursor-pointer flex items-center justify-center bg-teal-700"
-          onClick={() => dispatch(openAvailableTechModal())}
-        >
-          <BsPlusCircle className="h-8 w-8" />
-        </div>
-        <div
-          className="h-16 w-16 active:scale-95 transition-all cursor-pointer flex items-center justify-center bg-teal-700"
-          onClick={() => dispatch(openAvailableTechModal())}
-        >
-          <BsPlusCircle className="h-8 w-8" />
-        </div>
+        {buttons.map((buttonz) => {
+          const { id, icon, newIcon } = buttonz;
+          return (
+            <div
+              key={id}
+              className="h-16 w-16 active:scale-95 transition-all cursor-pointer flex items-center justify-center bg-teal-600"
+              onClick={() => {
+                dispatch(openAvailableTechModal());
+                dispatch(getId(id));
+                console.log(button);
+              }}
+            >
+              {!newIcon ? icon : newIcon}
+            </div>
+          );
+        })}
       </div>
       <ul className="leading-8 mt-4 w-full tracking-wide">
         {content.map((c, i) => {
           return <li key={i}>{c}</li>;
         })}
       </ul>
-      <button className="mt-4 py-4 w-3/5 bg-teal-700 active:scale-95 transition-all hover:bg-white hover:text-teal-700">
+      <button className="mt-4 py-4 w-3/5 bg-teal-600 active:scale-95 transition-all hover:bg-white hover:text-teal-700">
         Dodaj do koszyka
       </button>
     </div>
