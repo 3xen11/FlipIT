@@ -6,6 +6,7 @@ const initialState = {
   cartItems: [],
   total: 0,
   cartPosition: 0,
+  totalCost: 0,
   buttons: {
     basic: [
       {
@@ -132,7 +133,14 @@ const cartSlice = createSlice({
           state.buttons.premium[2].newIcon = null;
         } else return;
       }
+
       state.button = null;
+    },
+    getTotalCost: (state) => {
+      state.totalCost = state.cartItems.reduce(
+        (total, item) => total + item.cost,
+        0
+      );
     },
   },
 });
@@ -146,6 +154,8 @@ export const {
   id,
   cartItems,
   addToCart,
+  totalCost,
+  getTotalCost,
 } = cartSlice.actions;
 
 export default cartSlice.reducer;
