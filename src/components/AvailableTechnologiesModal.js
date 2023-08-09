@@ -3,6 +3,7 @@ import Technologies from '../../data/CategoriesDescriptionData';
 import Image from 'next/image';
 import { useEffect } from 'react';
 import { getIcon } from '../features/cart/cartSlice';
+import { closeModal } from '../features/modal/modalSlice';
 
 const AvailableTechnologiesModal = ({ getTechnologyArray }) => {
   const AvailableTechs = Technologies.filter((tech) => tech.available === true);
@@ -46,6 +47,7 @@ const AvailableTechnologiesModal = ({ getTechnologyArray }) => {
                         height={60}
                         alt={technology}
                         className="bg-white w-16 h-16 p-1"
+                        closeModal={dispatch(closeModal())}
                       />
                     )
                   );

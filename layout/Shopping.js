@@ -23,15 +23,11 @@ const Shopping = () => {
   const { showAvailableTechModal } = useSelector((store) => store.modal);
   const { buttons, button, id, cartItems } = useSelector((store) => store.cart);
 
-  // console.log();
-
   useEffect(() => {
     const buttonId = id;
     const newIcon = button;
     dispatch(changeIcon({ buttonId, newIcon }));
   }, [button]);
-
-  console.log(cartItems);
 
   return (
     <section className="max-w-screen pt-20 bg-white pb-20">

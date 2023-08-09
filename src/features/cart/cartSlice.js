@@ -75,6 +75,7 @@ const cartSlice = createSlice({
     getId: (state, action) => {
       state.id = action.payload;
     },
+
     addToCart: (state, action) => {
       const groupId = action.payload;
       //  BASIC
@@ -140,6 +141,7 @@ const cartSlice = createSlice({
 
       state.button = null;
     },
+
     getTotalCost: (state) => {
       state.totalCost = state.cartItems.reduce(
         (total, item) => total + item.cost,

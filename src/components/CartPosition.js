@@ -2,7 +2,6 @@ import { MdOutlineClose } from 'react-icons/md';
 import Image from 'next/image';
 
 const CartPosition = ({ id, cost, icons, title, removeCartItem, dispatch }) => {
-  console.log(id);
   return (
     <div
       key={id}

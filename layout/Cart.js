@@ -15,19 +15,21 @@ const Cart = () => {
       <div className="max-w-7xl mx-auto mt-20 ">
         <div className=" mb-16 flex justify-end ">
           <div className="flex-flex-col grow mr-2">
-            {cartItems.map((cartItem) => {
-              const { id, cost, icons, title } = cartItem;
-              return (
-                <CartPosition
-                  id={id}
-                  cost={cost}
-                  icons={icons}
-                  title={title}
-                  removeCartItem={removeCartItem}
-                  dispatch={dispatch}
-                />
-              );
-            })}
+            {cartItems.length === 0
+              ? 'TWÓJ KOSZYK JEST PUSTY'
+              : cartItems.map((cartItem) => {
+                  const { id, cost, icons, title } = cartItem;
+                  return (
+                    <CartPosition
+                      id={id}
+                      cost={cost}
+                      icons={icons}
+                      title={title}
+                      removeCartItem={removeCartItem}
+                      dispatch={dispatch}
+                    />
+                  );
+                })}
           </div>
           <div className="bg-white flex flex-col w-fit h-52 p-8 bg-white drop-shadow-lg">
             <p>Do zapłaty: </p>
