@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { nanoid } from 'nanoid';
 
 const initialState = {
   id: 'standard1',
@@ -80,6 +81,7 @@ const cartSlice = createSlice({
       if (groupId === 'basic') {
         if (state.buttons.basic[0].newIcon !== null) {
           const newItem = {
+            id: nanoid(),
             title: 'Pakiet BASIC:',
             icons: [state.buttons.basic[0].newIcon],
             cost: 20,
@@ -97,6 +99,7 @@ const cartSlice = createSlice({
           state.buttons.standard[1].newIcon !== null
         ) {
           const newItem = {
+            id: nanoid(),
             title: 'Pakiet STANDARD:',
             icons: [
               state.buttons.standard[0].newIcon,
@@ -118,6 +121,7 @@ const cartSlice = createSlice({
           state.buttons.premium[2].newIcon !== null
         ) {
           const newItem = {
+            id: nanoid(),
             title: 'Pakiet PREMIUM:',
             icons: [
               state.buttons.premium[0].newIcon,
@@ -142,6 +146,12 @@ const cartSlice = createSlice({
         0
       );
     },
+
+    removeCartItem: (state, action) => {
+      state.cartItems = state.cartItems.filter(
+        (item) => item.id !== action.payload
+      );
+    },
   },
 });
 
@@ -156,6 +166,7 @@ export const {
   addToCart,
   totalCost,
   getTotalCost,
+  removeCartItem,
 } = cartSlice.actions;
 
 export default cartSlice.reducer;

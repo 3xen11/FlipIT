@@ -1,9 +1,13 @@
 import { MdOutlineClose } from 'react-icons/md';
 import Image from 'next/image';
 
-const CartPosition = ({ cost, icons, title }) => {
+const CartPosition = ({ id, cost, icons, title, removeCartItem, dispatch }) => {
+  console.log(id);
   return (
-    <div className="max-w-7xl items-center flex h-24 mb-4 bg-white drop-shadow-lg hover:scale-105 transition-all">
+    <div
+      key={id}
+      className="max-w-7xl items-center flex h-24 mb-4 bg-white drop-shadow-lg  transition-all"
+    >
       <div className="flex w-1/3 ml-4">
         {icons.map((icon) => {
           return (
@@ -31,7 +35,10 @@ const CartPosition = ({ cost, icons, title }) => {
           Do zapłaty: <span className="font-bold">{cost} zł</span>
         </p>
 
-        <MdOutlineClose className="mx-8 text-3xl cursor-pointer hover:text-red-500 active:scale-90 transition-all" />
+        <MdOutlineClose
+          onClick={() => dispatch(removeCartItem(id))}
+          className="mx-8 text-3xl cursor-pointer hover:text-red-500 active:scale-90 transition-all"
+        />
       </div>
     </div>
   );
