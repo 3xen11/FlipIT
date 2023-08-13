@@ -25,7 +25,7 @@ const Application = () => {
 
   console.log(technologyArray);
   return (
-    <section className="max-w-screen mt-10 py-20 text-center">
+    <section className="max-w-screen grow mt-10 py-20 text-center">
       <div className="scale-75">
         <AvailableTechnologiesModal getTechnologyArray={getTechnologyArray} />
       </div>
