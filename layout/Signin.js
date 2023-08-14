@@ -7,7 +7,7 @@ import { setIsMobile } from '@/src/features/mobile/mobileSlice';
 
 const Signin = () => {
   const { login } = useSelector((store) => store.signin);
-  const { isMobile } = useSelector((store) => store.mobile);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
