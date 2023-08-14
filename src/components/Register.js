@@ -1,14 +1,12 @@
 import { LoginIcon } from '@/public/svg';
-import { useDispatch } from 'react-redux';
 
-const Register = ({ login, changeOption }) => {
-  const dispatch = useDispatch();
-
+const Register = ({ login, changeOption, isMobile, dispatch }) => {
   return (
     !login && (
-      <div className="bg-white w-full sm:w-4/5 max-w-5xl h-96 grid  sm:grid-cols-2">
-        <div className="flex flex-col justify-center items-center bg-white">
-          <LoginIcon className="w-fit h-4/5" />
+      <div className="bg-white w-full sm:w-4/5 max-w-5xl grid sm:grid-cols-2">
+        {/* //! OBRAZEK */}
+        <div className="sm:flex flex-col justify-center items-center bg-white hidden ">
+          <LoginIcon className="w-fit h-2/5 md:h-3/5 lg:h-4/5" />
           <p>
             Masz już konto?{' '}
             <span
@@ -19,9 +17,11 @@ const Register = ({ login, changeOption }) => {
             </span>
           </p>
         </div>
-        <div className="bg-slate-200 flex items-center justify-center">
+
+        {/* //! FORMULARZ */}
+        <div className="bg-slate-100 flex items-center justify-center py-14">
           <form className="w-full flex items-center justify-center">
-            <div className="flex flex-col  w-3/5 ">
+            <div className="flex flex-col  w-4/5 md:w-3/5">
               <label className=" mb-1" htmlFor="login">
                 E-mail:
               </label>
@@ -49,9 +49,22 @@ const Register = ({ login, changeOption }) => {
                 id="password"
                 placeholder="Powtórz swoje hasło"
               />
-              <button className="mt-8 tracking-wider text-white mx-auto bg-teal-500 py-2 w-full hover:text-teal-500 hover:bg-white active:scale-95 transition-all">
+              <button className="mt-20 tracking-wider text-white mx-auto bg-teal-500 py-2 w-full  hover:text-teal-500 hover:bg-white active:scale-95 transition-all">
                 Zarejestruj
               </button>
+              {isMobile ? (
+                <p className=" mt-10 -my-10 mx-auto  sm:hidden">
+                  Masz już konto?{' '}
+                  <span
+                    onClick={() => dispatch(changeOption())}
+                    className="text-teal-500 cursor-pointer font-bold"
+                  >
+                    Zaloguj się
+                  </span>
+                </p>
+              ) : (
+                ''
+              )}
             </div>
           </form>
         </div>

@@ -3,8 +3,10 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getTotalCost, removeCartItem } from '@/src/features/cart/cartSlice';
 import { EmptyCart } from '@/public/svg';
+import { setIsMobile } from '@/src/features/mobile/mobileSlice';
 
 const Cart = () => {
+  const { isMobile } = useSelector((store) => store.mobile);
   const { cartItems, totalCost } = useSelector((store) => store.cart);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -34,6 +36,8 @@ const Cart = () => {
                     title={title}
                     removeCartItem={removeCartItem}
                     dispatch={dispatch}
+                    setIsMobile={setIsMobile}
+                    isMobile={isMobile}
                   />
                 );
               })

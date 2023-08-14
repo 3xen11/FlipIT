@@ -1,13 +1,20 @@
 import { MdOutlineClose } from 'react-icons/md';
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 
-const CartPosition = ({ id, cost, icons, title, removeCartItem, dispatch }) => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
+const CartPosition = ({
+  id,
+  cost,
+  icons,
+  title,
+  removeCartItem,
+  dispatch,
+  setIsMobile,
+  isMobile,
+}) => {
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 767);
+      dispatch(setIsMobile(window.innerWidth <= 767));
     };
 
     window.addEventListener('resize', handleResize);
@@ -52,7 +59,7 @@ const CartPosition = ({ id, cost, icons, title, removeCartItem, dispatch }) => {
         </p>
         {isMobile ? (
           <p
-            className="text-red-500 font-bold mt-4 sm:mt-0 sm:ml-4"
+            className="text-red-500 font-bold mt-4 sm:mt-0 sm:ml-8 "
             onClick={() => dispatch(removeCartItem(id))}
           >
             Usuń
