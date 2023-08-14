@@ -25,11 +25,11 @@ const Application = () => {
 
   console.log(technologyArray);
   return (
-    <section className="max-w-screen grow mt-10 py-20 text-center">
+    <section className="max-w-screen grow -mt-14 py-20 text-center">
       <div className="scale-75">
         <AvailableTechnologiesModal getTechnologyArray={getTechnologyArray} />
       </div>
-      <p className="mb-4 font-bold">Pozostałe pytania: {maxIndex}</p>
+      <p className="m-10  font-bold">Pozostałe pytania: {maxIndex}</p>
       <AppFlashCard
         index={index}
         technologyArray={technologyArray}

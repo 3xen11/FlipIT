@@ -9,7 +9,7 @@ const Contact = () => {
         headingAccent={'NAPISZ'}
         sign={' do nas!'}
       />
-      <div className="max-w-7xl sm:w-4/5 mx-auto justify-center items-center px-5 py-20 min-h-min mb-10 contact-bg flex flex-col lg:flex-row">
+      <div className="max-w-7xl sm:w-4/5 mx-auto justify-center items-center px-5 py-10 min-h-min mb-10 contact-bg flex flex-col lg:flex-row">
         <div className="w-full md:w-2/5  hidden lg:block">
           <ContactIcon className="w-4/5 mx-auto h-full" />
         </div>

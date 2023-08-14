@@ -18,7 +18,7 @@ const Card = ({ id, title, description }) => {
         <div className=" card-front absolute h-full w-full flex items-center justify-center text-center  rounded-xl shadow-lg bg-[url('/svg/pricingCardBackgroundDark.svg')] bg-cover text-white font-bold tracking-wide">
           <p className="drop-shadow-lg">{title}</p>
         </div>
-        <div className="card-back p-4 leading-8 text-white absolute h-full w-full flex items-center justify-center rounded-xl shadow-lg -rotate-180 bg-teal-950">
+        <div className="card-back text-center p-4 leading-8 text-white absolute h-full w-full flex items-center justify-center rounded-xl shadow-lg -rotate-180 bg-teal-950">
           <p>{description}</p>
         </div>
       </div>

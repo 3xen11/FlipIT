@@ -7,7 +7,7 @@ const HowItWorks = () => {
     <section className="max-w-screen bg-white pt-20 pb-20">
       <SectionHeading heading={'Zobacz jakie to proste'} sign={'!'} />
       <div className="max-w-7xl mx-auto p-5">
-        <div className="flex flex-col bg-[#FAFAFA] overflow-hidden">
+        <div className="flex flex-col">
           {HowItWorksData.map((card, index) => {
             const { id } = card;
 
