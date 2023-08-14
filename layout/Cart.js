@@ -12,7 +12,7 @@ const Cart = () => {
   }, [cartItems]);
 
   return (
-    <section className="grow w-4/5 sm:w-full mx-auto">
+    <section className="grow w-[98%] mx-auto">
       <div className="max-w-7xl mx-auto mt-10 ">
         <div className=" mb-16 flex justify-end lg:flex-row  flex flex-col">
           <div className="flex flex-col  grow mr-2  order-2 lg:order-1 w-full">
@@ -39,7 +39,7 @@ const Cart = () => {
               })
             )}
           </div>
-          <div className="bg-white w-full sm:w-3/5 lg:w-fit flex flex-col mb-10 lg:mb-0 h-52 p-8 bg-white lg:order-2 drop-shadow-lg mx-auto">
+          <div className="bg-white w-11/12 sm:w-3/5 lg:w-fit flex flex-col mb-10 lg:mb-0 h-52 p-8 bg-white lg:order-2 drop-shadow-lg mx-auto">
             <p className="text-xl">Do zapłaty: </p>
             <p className="font-bold">
               {totalCost.length === 0 ? '0' : totalCost} zł
