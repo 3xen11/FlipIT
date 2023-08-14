@@ -52,19 +52,16 @@ const Register = ({ login, changeOption, isMobile, dispatch }) => {
               <button className="mt-20 tracking-wider text-white mx-auto bg-teal-500 py-2 w-full  hover:text-teal-500 hover:bg-white active:scale-95 transition-all">
                 Zarejestruj
               </button>
-              {isMobile ? (
-                <p className=" mt-10 -my-10 mx-auto  sm:hidden">
-                  Masz już konto?{' '}
-                  <span
-                    onClick={() => dispatch(changeOption())}
-                    className="text-teal-500 cursor-pointer font-bold"
-                  >
-                    Zaloguj się
-                  </span>
-                </p>
-              ) : (
-                ''
-              )}
+
+              <p className=" mt-10 -my-10 mx-auto  sm:hidden">
+                Masz już konto?{' '}
+                <span
+                  onClick={() => dispatch(changeOption())}
+                  className="text-teal-500 cursor-pointer font-bold"
+                >
+                  Zaloguj się
+                </span>
+              </p>
             </div>
           </form>
         </div>

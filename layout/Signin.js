@@ -24,18 +24,8 @@ const Signin = () => {
 
   return (
     <section className="flex items-center justify-center grow bg-slate-100 sm:bg-inherit drop-shadow-lg">
-      <Login
-        changeOption={changeOption}
-        login={login}
-        isMobile={isMobile}
-        dispatch={dispatch}
-      />
-      <Register
-        changeOption={changeOption}
-        login={login}
-        isMobile={isMobile}
-        dispatch={dispatch}
-      />
+      <Login changeOption={changeOption} login={login} dispatch={dispatch} />
+      <Register changeOption={changeOption} login={login} dispatch={dispatch} />
     </section>
   );
 };

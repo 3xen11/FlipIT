@@ -1,6 +1,6 @@
 import { RegisterIcon } from '@/public/svg';
 
-const Login = ({ login, changeOption, isMobile, dispatch }) => {
+const Login = ({ login, changeOption, dispatch }) => {
   {
     return (
       login && (
@@ -30,19 +30,16 @@ const Login = ({ login, changeOption, isMobile, dispatch }) => {
                 <button className="mt-20 tracking-wider text-white mx-auto bg-teal-500 py-2 w-full hover:text-teal-500 hover:bg-white active:scale-95 transition-all">
                   Zaloguj
                 </button>
-                {isMobile ? (
-                  <p className=" mt-10 -my-10 mx-auto  sm:hidden">
-                    Nie masz konta?{' '}
-                    <span
-                      onClick={() => dispatch(changeOption())}
-                      className="text-teal-500 cursor-pointer font-bold"
-                    >
-                      Zarejestruj się
-                    </span>
-                  </p>
-                ) : (
-                  ''
-                )}
+
+                <p className=" mt-10 -my-10 mx-auto  sm:hidden">
+                  Nie masz konta?{' '}
+                  <span
+                    onClick={() => dispatch(changeOption())}
+                    className="text-teal-500 cursor-pointer font-bold"
+                  >
+                    Zarejestruj się
+                  </span>
+                </p>
               </div>
             </form>
           </div>
