@@ -1,33 +1,11 @@
 import { MdOutlineClose } from 'react-icons/md';
 import Image from 'next/image';
-import { useEffect } from 'react';
 
-const CartPosition = ({
-  id,
-  cost,
-  icons,
-  title,
-  removeCartItem,
-  dispatch,
-  setIsMobile,
-  isMobile,
-}) => {
-  useEffect(() => {
-    const handleResize = () => {
-      dispatch(setIsMobile(window.innerWidth <= 767));
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
+const CartPosition = ({ id, cost, icons, title, removeCartItem, dispatch }) => {
   return (
     <div
       key={id}
-      className="max-w-7xl items-center flex py-4 px-2 mt-4 md:mt-0 md:mb-4 bg-white drop-shadow-lg w-11/12 sm:w-full mx-auto transition-all flex-col h-fit  sm:h-24 sm:flex-row"
+      className="max-w-7xl items-center flex py-6 px-2 mt-4 md:mt-0 md:mb-4 bg-white drop-shadow-lg w-11/12 sm:w-full mx-auto transition-all flex-col h-fit  sm:h-24 sm:flex-row"
     >
       <div className="flex justify-around w-full sm:w-1/3 -ml-4 mt-4 sm:mt-0 order-2 sm:ml-0 sm:justify-start sm:order-1">
         {icons.map((icon) => {
@@ -57,19 +35,18 @@ const CartPosition = ({
         <p className=" ">
           Koszt: <span className="font-bold">{cost} zł</span>
         </p>
-        {isMobile ? (
-          <p
-            className="text-red-500 font-bold mt-4 sm:mt-0 sm:ml-8 "
-            onClick={() => dispatch(removeCartItem(id))}
-          >
-            Usuń
-          </p>
-        ) : (
-          <MdOutlineClose
-            onClick={() => dispatch(removeCartItem(id))}
-            className="mx-8 text-3xl cursor-pointer hover:text-red-500 active:scale-90 transition-all"
-          />
-        )}
+
+        <p
+          className="text-red-500 font-bold mt-4 sm:mt-0 sm:ml-8 md:hidden text-lg"
+          onClick={() => dispatch(removeCartItem(id))}
+        >
+          Usuń
+        </p>
+
+        <MdOutlineClose
+          onClick={() => dispatch(removeCartItem(id))}
+          className="mx-8 text-3xl cursor-pointer hover:text-red-500 active:scale-90 transition-all hidden md:block"
+        />
       </div>
     </div>
   );
