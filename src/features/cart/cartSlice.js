@@ -5,6 +5,7 @@ const initialState = {
   id: 'standard1',
   button: null,
   cartItems: [],
+  cartItemsLength: 0,
   total: 0,
   cartPosition: 0,
   totalCost: 0,
@@ -140,6 +141,7 @@ const cartSlice = createSlice({
       }
 
       state.button = null;
+      state.cartItemsLength = state.cartItems.length;
     },
 
     getTotalCost: (state) => {
@@ -153,6 +155,7 @@ const cartSlice = createSlice({
       state.cartItems = state.cartItems.filter(
         (item) => item.id !== action.payload
       );
+      state.cartItemsLength = state.cartItems.length;
     },
   },
 });
@@ -169,6 +172,7 @@ export const {
   totalCost,
   getTotalCost,
   removeCartItem,
+  cartItemsLength,
 } = cartSlice.actions;
 
 export default cartSlice.reducer;
