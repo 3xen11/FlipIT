@@ -20,13 +20,9 @@ const TechnologyDescriptionModal = ({
         </p>
       </div>
       <p className="p-4 -mt-8">{description}</p>
-      <div className="grid grid-cols-3  text-center gap-4  -mt-6">
-        <p>junior</p>
-        <p>mid</p>
-        <p>senior</p>
-        <p>{junior}</p>
-        <p>{mid}</p>
-        <p>{senior}</p>
+      <div className="flex justify-center text-center gap-4  -mt-6">
+        <p>Ilość pytań:</p>
+        <p>20</p>
       </div>
     </div>
   );

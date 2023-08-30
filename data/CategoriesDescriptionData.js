@@ -7,9 +7,6 @@ export default [
     description:
       'JavaScript to wysokopoziomowy, dynamiczny język programowania, używany głównie do tworzenia interaktywnych stron internetowych. Wykonywany bezpośrednio w przeglądarce, umożliwia dodawanie efektów wizualnych, animacji, walidację formularzy oraz interakcję z użytkownikiem. JavaScript znajduje zastosowanie również w tworzeniu zaawansowanych aplikacji internetowych oraz jako język backendu, dzięki platformie Node.js. Jest popularny ze względu na swoją wszechstronność i uniwersalność w świecie programowania webowego.',
     available: true,
-    junior: 100,
-    mid: 50,
-    senior: 40,
     img: '/svg/javascript.svg',
   },
   {
@@ -18,9 +15,7 @@ export default [
     description:
       'TypeScript to nadzbiór języka JavaScript, który wprowadza statyczną typizację do skryptowego środowiska JavaScript. Dzięki temu programiści mogą definiować typy danych, co pomaga w wykrywaniu błędów i ułatwia rozwijanie aplikacji. TypeScript kompiluje się do standardowego JavaScriptu, więc może być używany wszędzie tam, gdzie JavaScript jest obsługiwany. Jest wykorzystywany głównie w dużych projektach i aplikacjach, aby zapewnić większą pewność działania kodu, ułatwić refaktoryzację oraz współpracę między programistami. Dzięki narzędziom takim jak inteligentne podpowiedzi, TypeScript zwiększa wydajność i jakość tworzonego oprogramowania, uczynił się popularnym wyborem w świecie programowania webowego.',
     available: true,
-    junior: 100,
-    mid: 50,
-    senior: 40,
+
     img: '/svg/typescript.svg',
   },
   {
@@ -29,9 +24,6 @@ export default [
     description:
       'React to popularna biblioteka JavaScript do budowy interfejsów użytkownika. Pozwala na tworzenie komponentów, które reprezentują fragmenty UI, a następnie składanie ich w hierarchię, tworząc zaawansowane aplikacje front-endowe. React stosuje wirtualny DOM, co przyspiesza renderowanie i aktualizację widoku. Dzięki React deweloperzy mogą tworzyć interaktywne, dynamiczne i responsywne strony internetowe oraz aplikacje webowe, które są wydajne i łatwe w utrzymaniu.',
     available: true,
-    junior: 100,
-    mid: 50,
-    senior: 40,
     img: '/svg/react.svg',
   },
   // {
@@ -47,9 +39,6 @@ export default [
     description:
       'Node.js to środowisko uruchomieniowe oparte na silniku JavaScript V8 od Google. Pozwala na wykonywanie kodu JavaScript poza przeglądarką, głównie w kontekście tworzenia serwerów i aplikacji backendowych. Node.js jest oparty na asynchroniczności, co umożliwia obsługę wielu równoczesnych żądań bez blokowania działania aplikacji. Node.js pozwala programistom na pisanie zaawansowanych serwerów, API oraz aplikacji sieciowych. Jest szczególnie popularny w tworzeniu mikroserwisów, narzędzi programistycznych, aplikacji czasu rzeczywistego i wielu innych dziedzinach.',
     available: false,
-    junior: 100,
-    mid: 50,
-    senior: 40,
     img: '/svg/node.svg',
   },
   {
@@ -58,9 +47,6 @@ export default [
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia repudiandae odio ut. Corporis adipisci hic magnam provident iusto, perspiciatis temporibus saepe quas reprehenderit repellendus, totam atque iure deserunt. Quaerat, veniam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia repudiandae odio ut. Corporis adipisci hic magnam provident iusto, perspiciatis temporibus saepe quas reprehenderit repellendus, totam atque iure deserunt. Quaerat, veniam.',
     available: false,
-    junior: 100,
-    mid: 50,
-    senior: 40,
     img: '/svg/git.svg',
   },
   {
@@ -69,9 +55,7 @@ export default [
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia repudiandae odio ut. Corporis adipisci hic magnam provident iusto, perspiciatis temporibus saepe quas reprehenderit repellendus, totam atque iure deserunt. Quaerat, veniam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia repudiandae odio ut. Corporis adipisci hic magnam provident iusto, perspiciatis temporibus saepe quas reprehenderit repellendus, totam atque iure deserunt. Quaerat, veniam.',
     available: false,
-    junior: 100,
-    mid: 50,
-    senior: 40,
+
     img: '/svg/angular.svg',
   },
   {
@@ -80,9 +64,6 @@ export default [
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia repudiandae odio ut. Corporis adipisci hic magnam provident iusto, perspiciatis temporibus saepe quas reprehenderit repellendus, totam atque iure deserunt. Quaerat, veniam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia repudiandae odio ut. Corporis adipisci hic magnam provident iusto, perspiciatis temporibus saepe quas reprehenderit repellendus, totam atque iure deserunt. Quaerat, veniam.',
     available: false,
-    junior: 100,
-    mid: 50,
-    senior: 40,
     img: '/svg/html.svg',
   },
   {
@@ -91,9 +72,7 @@ export default [
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia repudiandae odio ut. Corporis adipisci hic magnam provident iusto, perspiciatis temporibus saepe quas reprehenderit repellendus, totam atque iure deserunt. Quaerat, veniam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia repudiandae odio ut. Corporis adipisci hic magnam provident iusto, perspiciatis temporibus saepe quas reprehenderit repellendus, totam atque iure deserunt. Quaerat, veniam.',
     available: false,
-    junior: 100,
-    mid: 50,
-    senior: 40,
+
     img: '/svg/npm.svg',
   },
   {
@@ -102,9 +81,7 @@ export default [
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia repudiandae odio ut. Corporis adipisci hic magnam provident iusto, perspiciatis temporibus saepe quas reprehenderit repellendus, totam atque iure deserunt. Quaerat, veniam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia repudiandae odio ut. Corporis adipisci hic magnam provident iusto, perspiciatis temporibus saepe quas reprehenderit repellendus, totam atque iure deserunt. Quaerat, veniam.',
     available: false,
-    junior: 100,
-    mid: 50,
-    senior: 40,
+
     img: '/svg/css.svg',
   },
   {
@@ -113,9 +90,6 @@ export default [
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia repudiandae odio ut. Corporis adipisci hic magnam provident iusto, perspiciatis temporibus saepe quas reprehenderit repellendus, totam atque iure deserunt. Quaerat, veniam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia repudiandae odio ut. Corporis adipisci hic magnam provident iusto, perspiciatis temporibus saepe quas reprehenderit repellendus, totam atque iure deserunt. Quaerat, veniam.',
     available: false,
-    junior: 100,
-    mid: 50,
-    senior: 40,
     img: '/svg/tailwind.svg',
   },
   {
@@ -124,9 +98,6 @@ export default [
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia repudiandae odio ut. Corporis adipisci hic magnam provident iusto, perspiciatis temporibus saepe quas reprehenderit repellendus, totam atque iure deserunt. Quaerat, veniam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia repudiandae odio ut. Corporis adipisci hic magnam provident iusto, perspiciatis temporibus saepe quas reprehenderit repellendus, totam atque iure deserunt. Quaerat, veniam.',
     available: false,
-    junior: 100,
-    mid: 50,
-    senior: 40,
     img: '/svg/java.svg',
   },
   {
@@ -135,9 +106,6 @@ export default [
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia repudiandae odio ut. Corporis adipisci hic magnam provident iusto, perspiciatis temporibus saepe quas reprehenderit repellendus, totam atque iure deserunt. Quaerat, veniam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia repudiandae odio ut. Corporis adipisci hic magnam provident iusto, perspiciatis temporibus saepe quas reprehenderit repellendus, totam atque iure deserunt. Quaerat, veniam.',
     available: false,
-    junior: 100,
-    mid: 50,
-    senior: 40,
     img: '/svg/python.svg',
   },
   {
@@ -146,9 +114,6 @@ export default [
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia repudiandae odio ut. Corporis adipisci hic magnam provident iusto, perspiciatis temporibus saepe quas reprehenderit repellendus, totam atque iure deserunt. Quaerat, veniam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia repudiandae odio ut. Corporis adipisci hic magnam provident iusto, perspiciatis temporibus saepe quas reprehenderit repellendus, totam atque iure deserunt. Quaerat, veniam.',
     available: false,
-    junior: 100,
-    mid: 50,
-    senior: 40,
     img: '/svg/ruby.svg',
   },
   {
@@ -157,9 +122,7 @@ export default [
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia repudiandae odio ut. Corporis adipisci hic magnam provident iusto, perspiciatis temporibus saepe quas reprehenderit repellendus, totam atque iure deserunt. Quaerat, veniam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia repudiandae odio ut. Corporis adipisci hic magnam provident iusto, perspiciatis temporibus saepe quas reprehenderit repellendus, totam atque iure deserunt. Quaerat, veniam.',
     available: false,
-    junior: 100,
-    mid: 50,
-    senior: 40,
+
     img: '/svg/kotlin.svg',
   },
   {
@@ -168,9 +131,16 @@ export default [
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia repudiandae odio ut. Corporis adipisci hic magnam provident iusto, perspiciatis temporibus saepe quas reprehenderit repellendus, totam atque iure deserunt. Quaerat, veniam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia repudiandae odio ut. Corporis adipisci hic magnam provident iusto, perspiciatis temporibus saepe quas reprehenderit repellendus, totam atque iure deserunt. Quaerat, veniam.',
     available: false,
-    junior: 100,
-    mid: 50,
-    senior: 40,
+
+    img: '/svg/php.svg',
+  },
+  {
+    id: nanoid(),
+    technology: 'React Query',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia repudiandae odio ut. Corporis adipisci hic magnam provident iusto, perspiciatis temporibus saepe quas reprehenderit repellendus, totam atque iure deserunt. Quaerat, veniam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia repudiandae odio ut. Corporis adipisci hic magnam provident iusto, perspiciatis temporibus saepe quas reprehenderit repellendus, totam atque iure deserunt. Quaerat, veniam.',
+    available: true,
+
     img: '/svg/php.svg',
   },
   // {

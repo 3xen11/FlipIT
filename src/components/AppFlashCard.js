@@ -8,7 +8,13 @@ const AppFlashCard = ({ index, technologyArray, maxIndex }) => {
             : 'Gratulacje, znasz już odpowiedzi na wszystkie pytania!'}
         </p>
         <div className="flex items-center absolute -rotate-45 w-full h-full p-5 box-border bg-white opacity-0 transition-all hover:opacity-100 hover:rotate-0">
-          <p className="card__description mt-2.5 text-sm text-center w-full text-slate-700 leading-6 text-xl">
+          <p
+            className={`card__description mt-2.5  text-center w-full text-slate-700 leading-6 ${
+              technologyArray[index]?.answer.length > 300
+                ? 'text-sm'
+                : 'text-base'
+            }`}
+          >
             {maxIndex
               ? technologyArray[index]?.answer
               : 'Spróbuj teraz kolejnej kategorii!'}

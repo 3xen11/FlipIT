@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import QuestionsData from '@/data/QuestionsData';
 
 const initialState = {
-  maxIndex: 10, // chwilowo
+  maxIndex: 1, // chwilowo, ale 1 o dziwo działa
   index: 0,
   questions: QuestionsData,
   technology: 'JavaScript',

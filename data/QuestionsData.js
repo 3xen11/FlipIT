@@ -253,4 +253,336 @@ export default [
     answer:
       'Type assertion (również znany jako "type casting") pozwala programiście ręcznie określić typ zmiennej, jeśli TypeScript nie jest w stanie go automatycznie wywnioskować. Stosujemy go, gdy wiemy, że zmienna ma określony typ, ale TypeScript nie jest w stanie tego zweryfikować. Można użyć notacji "as" lub "<>" do wyrażenia type assertion. Na przykład: let someValue: any = "To jest wartość typu any"; let strLength: number = (someValue as string).length;',
   },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question: 'Do czego służy React Query?',
+    answer: 'ReactQuery służy do fetchowania danych w aplikacjach Reacta',
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question: 'Dlaczego React Query?',
+    answer:
+      'React jest bibliotetką UI i nie posiada wzorca do fetchowania danych, ReactQuery ułatwia ten proces',
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question: 'Co zastępuje React Query w Reactcie do fetchowania danych?',
+    answer:
+      'ReactQuery zastępuje useEffect i useState, do utrzymywania stanów komponentów jak ładowanie, błędy i wynik pobierania danych',
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question:
+      'Jakie są pierwsze trzy parametry przekazywane do hooka useQuery?',
+    answer:
+      'Pierwszym parametrem jeste queryKey, drguim funkcja fetchująca, trzecim obiekt z ustawieniami',
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question:
+      'Czy ReactQuery pomaga w zarządzaniu asynchronicznością i stanami serwera?',
+    answer:
+      'Tak, ReactQuery ułatwia pracę z asynchronicznością i stanami serwera bardziej niż biblioteki do zarządzania stanami',
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question: 'Jakie są różnice między stanami klienta a serwera?',
+    answer: `
+    Stany klienta:
+- przechowywane w pamięci aplikacji, a dostęp do nich lub ich aktualizacja jest synchroniczna
+Stany serwera:
+- utrzymywane zdalnie, wymagają asynchronicznych interfejsów API do pobierania lub aktualizowania
+- posiada współwłasność
+- dane mogą buć aktualizowane przez kogoś innego bez twojej wiedzy
+- dane UI mogą nie być zsynchronizowane ze zdalnymi danymi
+- jest wyzwaniem gdy trzeba radzić sobie z buforowaniem, deduplikacją wielu żądań dla tych samych danych, aktualizacją nieaktualnych danych w tle, optymalizacją wydajności itp.
+    `,
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question: 'Jak dodajemy możliwość używania ReactQuery w projekcie?',
+    answer: `
+    - importujemy QueryClientProvider i QueryClient z react-query
+- owijamy komponent <App> komponentem <QueryClientProvider>
+- tworzymy instancje QueryLinet - const queryClient = new QueryClinet()
+- w komponencie <QueryClientProvider> dodajemy props client={queryClient}
+    `,
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question: 'Czym jest queryKey w ReactQuery?',
+    answer:
+      'W React Query, queryKey to parametr używany w hookach i funkcjach, które pozwalają na odwoływanie się do konkretnego zapytania. queryKey jest tablicą zawierającą informacje potrzebne do zidentyfikowania danego zapytania w pamięci podręcznej (cache) React Query.',
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question: 'Z czego składa się queryKey?',
+    answer: `
+    Zwykle tablica queryKey składa się z dwóch elementów:
+- Klucz identyfikujący zasób lub endpoint: To może być np. nazwa endpointu API, np. "users" lub "posts"
+- Zmienne identyfikujące zapytanie: To są wartości lub zmienne, które różnicują zapytania do tego samego endpointu na podstawie jakichś kryteriów. 
+Na przykład, jeśli masz zapytanie o szczegóły użytkownika o konkretnym ID, to ID tego użytkownika mogłoby być częścią queryKey.
+    `,
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question:
+      'Jak dostać się do danych pobranych z serwera za pomocą useQuery?',
+    answer: `
+    Żeby dostać się do danych pobranych za pomocą useQuery, najlepiej jest go zdestrukturyzować.
+const {isLoading, isError, error,  data} = useQuery('nazwa_klucza', () => { return axios.get('adres-http') }
+    `,
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question: 'Jak włączyć ReactQuery devtools?',
+    answer: `
+    - Musimy zaimportować ReactQueryDevtools z ract-query/devtools
+- Przed tagiem zamykającym komponent <QueryClientProvider> dodajemy komponent <ReactQueryDevtools/>
+- Do dodanego komponentu dodajemy props initialIsOpen={true}
+    `,
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question: 'Czym jest queryCache?',
+    answer: `w React Query to globalna pamięć podręczna (cache), która przechowuje wyniki zapytań sieciowych, lokalne stany oraz metadane związane z tymi zapytaniami. 
+Jest to ważna część biblioteki React Query, ponieważ umożliwia przechowywanie danych na poziomie aplikacji i zarządzanie nimi w sposób zoptymalizowany.`,
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question: 'Na czym polega przechowywanie wyników zapytań w queryCache?',
+    answer: `queryCache gromadzi dane zwracane przez zapytania sieciowe w pamięci podręcznej. Dzięki temu, gdy aplikacja potrzebuje tych samych danych w przyszłości, nie musi ponownie wykonywać zapytania do serwera
+Można odwołać się do przechowywanych danych za pomocą queryKey`,
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question: 'Na czym polega automatyczne odświeżanie w queryCache?',
+    answer:
+      'React Query automatycznie obsługuje odświeżanie danych w tle. Możesz ustawić czas ważności (ttl) dla danych w pamięci podręcznej, po którym zostaną automatycznie odświeżone przy kolejnym użyciu',
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question:
+      'Czy za pomocą React Query można ustawić wartość inicjującą dla podstrony o konkretnym ID?',
+    answer: `
+    Tak, useQuery jako 3 parametr może przyjąć w obiekcie ustawień "initialData" do którego trzeba przekazać instancję useQueryClient() z metodą getQueryData która jako parametr przyjmuje queryKey.
+Następnie do data, przypisujemy to co zwróciła nam instancja queryClient w połączeniu z getQueryData`,
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question: 'Na czym polega zarządzanie lokalnym stanem w queryCache?',
+    answer:
+      'queryCache umożliwia również przechowywanie i zarządzanie lokalnym stanem, który jest niezależny od komponentów React. Możesz używać lokalnego stanu w celu przechowywania np. flag aktywacji lub stanów interakcji, które nie są związane bezpośrednio z danymi sieciowymi',
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question: 'Na czym polega usuwanie i aktualizacja danych w queryCache?',
+    answer:
+      'Możesz usuwać konkretne dane z pamięci podręcznej lub ręcznie wywoływać zapytania w celu aktualizacji danych w tle',
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question: 'Czym jest staleTime?',
+    answer: `
+    - staleTime to opcjonalny parametr useQuery, który wpływa na to, jak długo dane w pamięci podręcznej są uważane za "przestarzałe" (stale)
+- Po upływie tego czasu, nawet jeśli dane są przestarzałe, React Query nadal zwróci te dane, zanim zostanie wywołane nowe zapytanie do serwera w celu ich odświeżenia
+- W praktyce, staleTime pozwala na wyświetlanie przestarzałych danych przez pewien okres czasu, zanim użytkownik zobaczy nowe dane po wykonaniu nowego zapytania do serwera
+    `,
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question: 'Czym jest cacheTime?',
+    answer: `
+    - cacheTime to opcjonalny parametr useQuery, który określa, jak długo dane z zapytania powinny pozostać w pamięci podręcznej (cache)
+- Po upływie tego czasu, React Query może próbować automatycznie odświeżyć dane, ale tylko jeśli komponent korzystający z tych danych jest aktywny (zamontowany)
+- Jeśli cacheTime nie jest ustawione, domyślnie dane w pamięci podręcznej pozostaną tak długo, jak długo zostaną użyte w komponencie
+    `,
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question: 'Czym jest refetchOnMount?',
+    answer: `
+    refetchOnMount to opcjonalny parametr używany w hooku useQuery biblioteki React Query
+Ten parametr pozwala kontrolować, czy dane będą automatycznie odświeżane, gdy komponent, który używa tych danych, zostanie zamontowany (renderowany) na stronie
+    `,
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question: 'Czym jest refetchOnWindowFocus?',
+    answer: `refetchOnWindowFocus to opcjonalny parametr używany w hooku useQuery biblioteki React Query.
+Parametr ten pozwala kontrolować, czy dane będą automatycznie odświeżane, gdy okno przeglądarki otrzyma focus, czyli stanie się aktywne`,
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question: 'Czym jest polling?',
+    answer: `
+    W React Query, polling to mechanizm wbudowany w bibliotekę, który umożliwia automatyczne odświeżanie danych w regularnych odstępach czasu
+Jest to narzędzie zaprojektowane do łatwego i efektywnego realizowania operacji pollingu bez konieczności pisania dodatkowego kodu
+Dzięki temu, możesz automatycznie odpytywać serwer o najnowsze dane w określonych interwałach czasu`,
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question: 'Jak użyć pollingu?',
+    answer:
+      'Aby użyć pollingu w React Query, wystarczy dodać opcję refetchInterval do hooka useQuery lub useMutation, w zależności od tego, czy chcesz odświeżać dane czy wykonywać mutacje w regularnych odstępach czasu',
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question: 'Czym jest refetchIntervalInBackground?',
+    answer:
+      'refetchIntervalInBackground pozwala na automatyczne odświeżanie danych, nawet w momencie kiedy przeglądarka nie wskazuje na zamontowany komponent',
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question: 'Jak wywołać useQuery po kliknięciu w przycisk?',
+    answer: `Żeby wywołać useQuery po kliknięciu w przycisk wystarczy zdestrukturyzować 'refetch' z useQuery i dodać je np. w buttonie 'onClick={refetch}'`,
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question:
+      'Jak w React Query wykonujemy zapytania rownoległe (Parallel Queries)?',
+    answer:
+      'Aby wykonać zapytanie równoległe w React Query wystarczy użyć useQuery() tyle razy ile musimy pobrać dane',
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question: 'Do czego służy useQueries w React Query?',
+    answer: `
+    Głównym celem useQueries jest umożliwienie efektywnego pobierania danych z różnych źródeł lub endpointów API w jednym komponencie, przy minimalnym wpływie na wydajność. 
+Pozwala to na równoczesne pobieranie wielu zestawów danych, bez blokowania interfejsu użytkownika i niepotrzebnie powtarzania zapytań, które są niezależne od siebie.
+
+    `,
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question: 'Czym jest useQueryClient w React Query?',
+    answer: `
+    useQueryClient to hook dostarczany przez bibliotekę React Query, który umożliwia dostęp do instancji QueryClient. 
+QueryClient jest centralnym punktem kontroli w React Query, przechowującym informacje o zapytaniach, danych cache'owanych oraz funkcjonalności związanych z zarządzaniem stanem zapytań.
+    `,
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question: 'W jakich celach używa się useQueryClient?',
+    answer: `- Wywoływanie ręcznych odświeżeń zapytań: Możesz użyć queryClient do ręcznego wywołania odświeżenia konkretnego zapytania, np. w reakcji na akcje użytkownika.
+- Dodawanie nowych danych do cache'a: QueryClient pozwala na manualne dodawanie danych do cache'a, co może być przydatne, gdy masz dane uzyskane z innych źródeł lub manipulujesz nimi w pewien sposób.
+- Usuwanie danych z cache'a: Możesz również usunąć konkretne dane z cache'a przy użyciu queryClient.
+- Dostęp do globalnych ustawień: QueryClient przechowuje również globalne ustawienia dla zapytań, takie jak maksymalny czas ważności danych w cache'u.
+- Zarządzanie stanem zapytań: Przy użyciu queryClient możesz manipulować stanem zapytań, np. zatrzymać lub wznowić wykonywanie zapytań.`,
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question: 'Do czego służy useInfinityQuery?',
+    answer: `useInfiniteQuery pozwala na łatwe zarządzanie danymi stronicowanymi w przypadku, gdy każda strona danych może być również opakowana w dodatkowych informacjach, takich jak tokeny paginacyjne itp. Ten hook pomaga w automatyzacji procesu ładowania kolejnych stron danych w odpowiedzi na akcje użytkownika, takie jak przewijanie`,
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question: 'Czym jest mutacja w React Query?',
+    answer: `W bibliotece React Query, mutacje służą do wykonywania operacji zmiany na serwerze, takich jak dodawanie, aktualizowanie lub usuwanie danych. Mutacje umożliwiają interakcję z API w celu wprowadzenia zmian w danych i równocześnie automatycznie aktualizują stan lokalny w React Query na podstawie odpowiedzi z serwera.`,
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question: 'Jakie są podstawowe cechy mutacji w React Query?',
+    answer: `- Automatyczna synchronizacja stanu: Po wykonaniu mutacji i otrzymaniu odpowiedzi z serwera, React Query automatycznie aktualizuje dane w swoim lokalnym stanie. To oznacza, że nie musisz samodzielnie aktualizować widoku po zakończeniu mutacji.
+- Obsługa optymistyczna: React Query obsługuje optymistyczną aktualizację stanu, co oznacza, że możesz natychmiast zaktualizować interfejs użytkownika po uruchomieniu mutacji, nawet przed otrzymaniem potwierdzenia od serwera. W przypadku, gdy mutacja się nie powiedzie, React Query cofnie zmiany.
+- Zarządzanie stanem mutacji: React Query dostarcza informacje na temat stanu mutacji, takie jak czy mutacja jest w trakcie wykonywania, czy się powiodła, czy wystąpił błąd itp. Możesz korzystać z tych informacji, aby dostosować interfejs użytkownika.
+- Caching: Podobnie jak w przypadku zapytań pobierających dane, React Query również przechowuje w pamięci wynik mutacji, co pozwala na korzystanie z tych danych w innych częściach aplikacji.`,
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question: 'Czym jest Query Invalidation w React Query?',
+    answer: `Query Invalidation to pojęcie związane z biblioteką React Query, która jest narzędziem do zarządzania stanem zapytań do API, buforowania danych i automatycznego odświeżania ich w interfejsie użytkownika.
+Głównym celem React Query jest zapewnienie sprawnego zarządzania danymi pobieranymi z serwera poprzez zapytania (queries) oraz danych wysyłanych na serwer poprzez mutacje (mutations), przy minimalnej ilości zbędnego kodu i zapewnieniu dobrej wydajności.
+`,
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question: 'Do czego odnosi się Query Invalidation?',
+    answer: `Query Invalidation odnosi się do procesu, w którym możesz wywołać "nieważne" (invalidate) dane w pamięci podręcznej React Query. To oznacza, że możesz ręcznie spowodować, że dany zestaw danych jest przestarzały i wymaga ponownego pobrania od serwera. Możesz to zrobić, na przykład, gdy wiesz, że dane zostały zmienione poza aplikacją i chcesz upewnić się, że twoja aplikacja ma zawsze aktualne dane.`,
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question: 'Jakie są typowe przypadki użycia Query Invalidation?',
+    answer: `-Po zakończeniu mutacji: Po wykonaniu mutacji, która zmienia dane na serwerze, możesz zainwalidować powiązane z tą mutacją zapytania, aby spowodować ponowne pobranie i odświeżenie tych danych.
+-Planowane odświeżanie: Możesz zainwalidować dane w określonych interwałach czasu, aby zapewnić, że twoje dane zawsze są aktualne.
+-Zewnętrzne zmiany: Jeśli wiesz, że dane zostały zmienione poprzez inne źródło (np. inne urządzenie lub użytkownik), możesz zaktualizować te dane w React Query, wywołując inwalidację.
+`,
+  },
+  {
+    id: nanoid(),
+    known: false,
+    tech: 'React Query',
+    question: 'Czym jest Optimistic Updates w React Query?',
+    answer: `W React Query, "Optimistic Updates" (optymistyczne aktualizacje) to podejście, które pozwala na płynne i natychmiastowe reakcje interfejsu użytkownika w odpowiedzi na akcje, takie jak tworzenie, aktualizowanie lub usuwanie danych, nawet zanim faktyczne żądania do serwera zostaną zakończone. Działa to na zasadzie przewidywania, że operacja na danych się powiedzie, i odzwierciedlenia tego przewidywania w interfejsie użytkownika, zanim odpowiedź od serwera zostanie odebrana.`,
+  },
 ];
