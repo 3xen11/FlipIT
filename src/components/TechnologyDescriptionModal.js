@@ -1,12 +1,14 @@
+import Questions from '../../data/QuestionsData';
+
 const TechnologyDescriptionModal = ({
   id,
   description,
   technology,
-  junior,
-  mid,
-  senior,
   available,
 }) => {
+  const questionsQuantity = Questions.filter(
+    (e) => e.tech === technology
+  ).length;
   return (
     <div key={id} className=" w-full h-full flex flex-col justify-around">
       <div>
@@ -22,7 +24,7 @@ const TechnologyDescriptionModal = ({
       <p className="p-4 -mt-8">{description}</p>
       <div className="flex justify-center text-center gap-4  -mt-6">
         <p>Ilość pytań:</p>
-        <p>20</p>
+        <p>{questionsQuantity}</p>
       </div>
     </div>
   );

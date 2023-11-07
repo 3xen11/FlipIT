@@ -141,7 +141,7 @@ export default [
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia repudiandae odio ut. Corporis adipisci hic magnam provident iusto, perspiciatis temporibus saepe quas reprehenderit repellendus, totam atque iure deserunt. Quaerat, veniam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia repudiandae odio ut. Corporis adipisci hic magnam provident iusto, perspiciatis temporibus saepe quas reprehenderit repellendus, totam atque iure deserunt. Quaerat, veniam.',
     available: true,
 
-    img: '/svg/php.svg',
+    img: '/img/reactquery.png',
   },
   // {
   //   id: nanoid(),
