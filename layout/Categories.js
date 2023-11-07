@@ -16,7 +16,9 @@ const Categories = () => {
     );
     setChosenTechnology(selectedTechnology);
   };
-
+  const sortedTechnologies = Technologies.slice().sort(
+    (a, b) => b.available - a.available
+  );
   return (
     <>
       <section className="py-20 ">
@@ -25,7 +27,7 @@ const Categories = () => {
         />
 
         <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-4  p-5 ">
-          {Technologies.map((tech) => {
+          {sortedTechnologies.map((tech) => {
             return (
               <TechnologySquare
                 {...tech}
