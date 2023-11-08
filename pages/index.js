@@ -9,7 +9,7 @@ import Footer from '@/layout/Footer';
 
 const Home = () => {
   return (
-    <>
+    <div className="overflow-hidden">
       <Navigation />
       <Header />
       <WhyFlashcards />
@@ -18,7 +18,7 @@ const Home = () => {
       <Shopping />
       <Contact />
       <Footer />
-    </>
+    </div>
   );
 };
 export default Home;
