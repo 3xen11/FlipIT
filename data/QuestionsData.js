@@ -573,9 +573,9 @@ Głównym celem React Query jest zapewnienie sprawnego zarządzania danymi pobie
     known: false,
     tech: 'React Query',
     question: 'Jakie są typowe przypadki użycia Query Invalidation?',
-    answer: `-Po zakończeniu mutacji: Po wykonaniu mutacji, która zmienia dane na serwerze, możesz zainwalidować powiązane z tą mutacją zapytania, aby spowodować ponowne pobranie i odświeżenie tych danych.
--Planowane odświeżanie: Możesz zainwalidować dane w określonych interwałach czasu, aby zapewnić, że twoje dane zawsze są aktualne.
--Zewnętrzne zmiany: Jeśli wiesz, że dane zostały zmienione poprzez inne źródło (np. inne urządzenie lub użytkownik), możesz zaktualizować te dane w React Query, wywołując inwalidację.
+    answer: `- Po zakończeniu mutacji: Po wykonaniu mutacji, która zmienia dane na serwerze, możesz zainwalidować powiązane z tą mutacją zapytania, aby spowodować ponowne pobranie i odświeżenie tych danych.
+- Planowane odświeżanie: Możesz zainwalidować dane w określonych interwałach czasu, aby zapewnić, że twoje dane zawsze są aktualne.
+- Zewnętrzne zmiany: Jeśli wiesz, że dane zostały zmienione poprzez inne źródło (np. inne urządzenie lub użytkownik), możesz zaktualizować te dane w React Query, wywołując inwalidację.
 `,
   },
   {
