@@ -14,7 +14,7 @@ const error = () => {
         </div>
         <div>
           <Link href="/" className="font-bold text-2xl cursor-pointer">
-            Wróć na stronę główną
+            Przenieś na stronę główną
           </Link>
         </div>
       </div>
