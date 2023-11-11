@@ -1,12 +1,16 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React, { useState, useEffect } from 'react';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { FaUserCircle } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
 
-const Navigation = () => {
+const Navigation = ({ shoppingCardRef }) => {
+  const router = useRouter();
+
   const [isSticky, setIsSticky] = useState(false);
   const { cartItemsLength } = useSelector((store) => store.cart);
+  const currentPath = router.pathname;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +28,10 @@ const Navigation = () => {
     };
   }, []);
 
+  const scrollSectionShoppingCard = () => {
+    shoppingCardRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className={`bg-white z-10 ${isSticky ? 'sticky top-0' : ''}`}>
       <div className="flex justify-between items-center max-w-7xl h-16 mx-auto px-5">
@@ -34,9 +42,13 @@ const Navigation = () => {
           FISZK<span className="text-teal-500">IT</span>{' '}
         </Link>
         <ul className="flex gap-8 text-3xl font-bold text-slate-700">
-          <li className="cursor-pointer text-lg transition-all hover:text-teal-500 hover:scale-105 active:scale-100">
-            <Link href="/">Kup teraz</Link>
-          </li>
+          {currentPath === '/' ? (
+            <li className="cursor-pointer text-lg transition-all hover:text-teal-500 hover:scale-105 active:scale-100">
+              <p onClick={scrollSectionShoppingCard}>Kup teraz</p>
+            </li>
+          ) : (
+            ''
+          )}
           <li className="cursor-pointer transition-all hover:text-teal-500 hover:scale-105 active:scale-100">
             <Link className="relative" href="/cart">
               <AiOutlineShoppingCart />

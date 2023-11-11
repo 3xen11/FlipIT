@@ -26,10 +26,10 @@ import {
   clearIcons,
 } from '@/src/features/cart/cartSlice';
 
-const Shopping = () => {
+const Shopping = ({ shoppingCardRef }) => {
   const dispatch = useDispatch();
   const { showAvailableTechModal } = useSelector((store) => store.modal);
-  const { buttons, button, id, cartItems } = useSelector((store) => store.cart);
+  const { buttons, button, id } = useSelector((store) => store.cart);
   const router = useRouter();
 
   useEffect(() => {
@@ -40,14 +40,15 @@ const Shopping = () => {
 
   useEffect(() => {
     if (router.pathname === '/') {
-      console.log('test');
-      console.log(buttons);
       dispatch(clearIcons());
     }
   }, [router.pathname]);
 
   return (
-    <section className="max-w-screen pt-20 bg-white pb-20">
+    <section
+      ref={shoppingCardRef}
+      className="max-w-screen pt-20 bg-white pb-20"
+    >
       <SectionHeading heading={'Nie czekaj, zacznij naukę już teraz!'} />
       <div className="max-w-7xl mx-auto p-5 flex flex-col lg:flex-row  justify-around items-center lg:items-end">
         <ShoppingCardStandard
