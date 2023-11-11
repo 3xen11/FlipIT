@@ -9,6 +9,7 @@ const initialState = {
   total: 0,
   cartPosition: 0,
   totalCost: 0,
+  iconGroups: ['basic', 'standard', 'premium'],
 
   buttons: {
     basic: [
@@ -158,6 +159,15 @@ const cartSlice = createSlice({
       );
       state.cartItemsLength = state.cartItems.length;
     },
+
+    clearIcons: (state) => {
+      state.iconGroups.forEach((group) => {
+        state.buttons[group] = state.buttons[group].map((button) => ({
+          ...button,
+          newIcon: null,
+        }));
+      });
+    },
   },
 });
 
@@ -174,6 +184,7 @@ export const {
   getTotalCost,
   removeCartItem,
   cartItemsLength,
+  clearIcons,
 } = cartSlice.actions;
 
 export default cartSlice.reducer;

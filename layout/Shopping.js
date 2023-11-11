@@ -1,3 +1,6 @@
+// Next
+import { useRouter } from 'next/router';
+
 // Data
 import ShoppingCardData from '@/data/ShoppingCardData';
 
@@ -16,18 +19,32 @@ import AvailableTechnologiesModal from '@/src/components/AvailableTechnologiesMo
 // Slices
 import { openAvailableTechModal } from '@/src/features/modal/modalSlice';
 import { getRandomNumber } from '@/src/features/questions/questionSlice';
-import { getId, changeIcon, addToCart } from '@/src/features/cart/cartSlice';
+import {
+  getId,
+  changeIcon,
+  addToCart,
+  clearIcons,
+} from '@/src/features/cart/cartSlice';
 
 const Shopping = () => {
   const dispatch = useDispatch();
   const { showAvailableTechModal } = useSelector((store) => store.modal);
   const { buttons, button, id, cartItems } = useSelector((store) => store.cart);
+  const router = useRouter();
 
   useEffect(() => {
     const buttonId = id;
     const newIcon = button;
     dispatch(changeIcon({ buttonId, newIcon }));
   }, [button]);
+
+  useEffect(() => {
+    if (router.pathname === '/') {
+      console.log('test');
+      console.log(buttons);
+      dispatch(clearIcons());
+    }
+  }, [router.pathname]);
 
   return (
     <section className="max-w-screen pt-20 bg-white pb-20">
