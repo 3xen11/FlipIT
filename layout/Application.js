@@ -23,18 +23,31 @@ const Application = () => {
     maxIndex && dispatch(getQuestionId(technologyArray[index]?.id));
   }, [index, maxIndex]);
 
-  console.log(technologyArray);
   return (
     <section className="max-w-screen grow -mt-14 py-20 text-center">
       <div className="scale-75">
         <AvailableTechnologiesModal getTechnologyArray={getTechnologyArray} />
       </div>
       <p className="m-10  font-bold">Pozostałe pytania: {maxIndex}</p>
-      <AppFlashCard
-        index={index}
-        technologyArray={technologyArray}
-        maxIndex={maxIndex}
-      />
+      <div className="grid grid-cols-3">
+        <AppFlashCard
+          index={index}
+          technologyArray={technologyArray}
+          maxIndex={maxIndex}
+        />
+        {technologyArray[index]?.bonus && (
+          <div className="bg-white w-3/4 ml-5 shadow-lg relative ">
+            <div className="bg-white transition-all w-full h-72 mt-8  absolute  hover:opacity-0 text-center ">
+              <p className="mt-28">
+                Najedź żeby sprawdzić dodatkowe informacje
+              </p>
+            </div>
+            <h5 className="text-xl font-bold my-2">Bonus:</h5>
+            <p className="text-start px-2">{technologyArray[index]?.bonus}</p>
+          </div>
+        )}
+      </div>
+
       <KnownUnknownButtons
         markAsKnown={markAsKnown}
         getRandomIndex={getRandomIndex}

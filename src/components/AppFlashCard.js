@@ -20,8 +20,8 @@ const AppFlashCard = ({ index, technologyArray, maxIndex }) => {
   }
 
   return (
-    <div className="w-full flex justify-center">
-      <div className="bg-[url('/svg/pricingCardBackgroundDark.svg')] bg-cover relative w-screen sm:w-4/5 lg:w-3/5 max-w-xl h-80 rounded-xl flex items-center justify-center overflow-hidden transition-all hover:shadow-lg hover:transform hover:scale-110">
+    <div className="grid col-start-2">
+      <div className="bg-[url('/svg/pricingCardBackgroundDark.svg')] bg-cover relative w-screen sm:w-4/5 lg:w-full max-w-xl mx-auto rounded-xl flex items-center justify-center overflow-hidden transition-all hover:shadow-lg hover:transform hover:scale-110 h-80">
         <p className="font-bold text-xl text-white text-center px-4">
           {maxIndex
             ? technologyArray[index]?.question

@@ -1,11 +1,12 @@
 import { MdOutlineClose } from 'react-icons/md';
 import Image from 'next/image';
+import { useSelector } from 'react-redux';
 
 const CartPosition = ({ id, cost, icons, title, removeCartItem, dispatch }) => {
   return (
     <div
       key={id}
-      className="max-w-7xl items-center flex py-6 px-2 mt-4 md:mt-0 md:mb-4 bg-white drop-shadow-lg w-11/12 sm:w-full mx-auto transition-all flex-col h-fit  sm:h-24 sm:flex-row"
+      className={`max-w-7xl items-center flex py-6 px-2 mt-4 md:mt-0 md:mb-4 bg-white drop-shadow-lg w-11/12 sm:w-full mx-auto transition-all flex-col h-fit  sm:h-24 sm:flex-row`}
     >
       <div className="flex justify-around w-full sm:w-1/3 -ml-4 mt-4 sm:mt-0 order-2 sm:ml-0 sm:justify-start sm:order-1">
         {icons.map((icon) => {

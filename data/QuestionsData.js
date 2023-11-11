@@ -9,6 +9,8 @@ export default [
       'Czym różnią się zmienne zadeklarowane przy użyciu "var", "let" i "const"?',
     answer:
       'Zmienne zadeklarowane przy użyciu "var" są hoistowane i mają zakres funkcji, natomiast zmienne zadeklarowane przy użyciu "let" i "const" mają blokowy zakres i nie są hoistowane. "const" tworzy zmienną stałą, której wartość nie może być zmieniona po przypisaniu, a "let" pozwala na zmianę wartości po zadeklarowaniu.',
+    bonus:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia aliquam assumenda dicta ipsa rem ut iure! Sint nulla, iusto necessitatibus error odit architecto maxime suscipit perspiciatis eaque, est voluptate. Autem.',
   },
   {
     id: nanoid(),
@@ -34,6 +36,7 @@ export default [
     question: 'Co to jest zjawisko "hoisting" w JavaScript?',
     answer:
       'Hoisting to zachowanie w JavaScript, w którym deklaracje zmiennych i funkcji są przenoszone na górę zakresu ich działania, ale nie ich inicjalizacje. Oznacza to, że można użyć zmiennej lub funkcji przed ich deklaracją, ale wartość będzie "undefined", jeśli nie zostaną zainicjalizowane przed użyciem.',
+    bonus: 'test2',
   },
   {
     id: nanoid(),

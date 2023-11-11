@@ -9,6 +9,7 @@ const initialState = {
   total: 0,
   cartPosition: 0,
   totalCost: 0,
+
   buttons: {
     basic: [
       {
