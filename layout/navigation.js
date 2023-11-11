@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { FaUserCircle } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
@@ -10,7 +10,7 @@ const Navigation = ({ shoppingCardRef }) => {
 
   const [isSticky, setIsSticky] = useState(false);
   const { cartItemsLength } = useSelector((store) => store.cart);
-  const currentPath = router.pathname;
+  const currentPaths = router.pathname;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,7 +42,7 @@ const Navigation = ({ shoppingCardRef }) => {
           FISZK<span className="text-teal-500">IT</span>{' '}
         </Link>
         <ul className="flex gap-8 text-3xl font-bold text-slate-700">
-          {currentPath === '/' ? (
+          {currentPaths === '/' ? (
             <li className="cursor-pointer text-lg transition-all hover:text-teal-500 hover:scale-105 active:scale-100">
               <p onClick={scrollSectionShoppingCard}>Kup teraz</p>
             </li>
