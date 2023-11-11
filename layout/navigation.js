@@ -47,7 +47,7 @@ const Navigation = ({ shoppingCardRef }) => {
               <p onClick={scrollSectionShoppingCard}>Kup teraz</p>
             </li>
           ) : (
-            ''
+            <p>test</p>
           )}
           <li className="cursor-pointer transition-all hover:text-teal-500 hover:scale-105 active:scale-100">
             <Link className="relative" href="/cart">
